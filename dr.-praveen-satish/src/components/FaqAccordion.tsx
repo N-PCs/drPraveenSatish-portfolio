@@ -72,23 +72,10 @@ export default function FaqAccordion() {
           <h2 className="text-3xl font-display font-bold text-[#1A202C] tracking-tight mt-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-500 font-sans mt-3 text-sm">
-            Providing patient comfort through precise, transparent answers on surgical prepare protocols, home healing expectations, and emergency warning signs.
-          </p>
         </div>
 
         {/* Tab Controls */}
         <div className="flex justify-center bg-brand-slate-light p-1 rounded-xl border border-gray-200 w-fit mx-auto mb-8">
-          <button
-            onClick={() => { setActiveCategory('all'); setExpandedIndex(null); }}
-            className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg transition-all cursor-pointer ${
-              activeCategory === 'all'
-                ? 'bg-[#2C7A7B] text-white shadow-xs'
-                : 'text-gray-600 hover:text-[#1A202C]'
-            }`}
-          >
-            All Questions
-          </button>
           <button
             onClick={() => { setActiveCategory('pre-op'); setExpandedIndex(null); }}
             className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg transition-all cursor-pointer ${

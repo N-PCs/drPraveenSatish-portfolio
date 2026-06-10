@@ -49,9 +49,6 @@ export default function Expertise() {
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight mt-4">
             Core Surgical Expertise Matrix
           </h2>
-          <p className="text-gray-600 font-sans mt-3 text-base sm:text-lg">
-            Providing dual board-caliber operating standards across complex oncology, reconstructive, joint pathology, and corrective craniofacial jaw alignment procedures.
-          </p>
         </div>
 
         {/* 6-Core Grid */}
@@ -97,28 +94,6 @@ export default function Expertise() {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Reassuring Quality Indicator Banner */}
-        <div className="mt-16 bg-brand-primary text-white rounded-2xl p-8 flex flex-col md:flex-row justify-between items-center gap-6 border-l-4 border-brand-teal">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded bg-emerald-500"></span>
-              <span className="text-[10px] tracking-wider uppercase font-mono text-brand-teal font-extrabold">GOLD STANDARDS CLINICAL WORKFLOW</span>
-            </div>
-            <h3 className="text-lg font-display font-bold mt-1 text-white">
-              Surgical Interventions Governed by International Evidence-Based Guidelines
-            </h3>
-            <p className="text-xs text-gray-400 mt-1 max-w-xl">
-              All surgeries adhere rigidly to AOCMF trauma rigid-fixation standards, NCCN oral cancer margins protocols, and joint rehabilitation metrics to ensure maximum long-term chewing comfort.
-            </p>
-          </div>
-          <a
-            href="mailto:praveenmaxfacs@icloud.com"
-            className="px-6 py-3 border border-white/20 hover:border-brand-teal text-white font-medium text-xs rounded-xl transition-all uppercase tracking-wider whitespace-nowrap"
-          >
-            Request Referral Guide
-          </a>
         </div>
 
       </div>

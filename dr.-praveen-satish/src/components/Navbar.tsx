@@ -26,7 +26,6 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
     { label: 'Academic', id: 'academic' },
     { label: 'Research', id: 'research' },
     { label: 'FAQ', id: 'faq' },
-    { label: 'Contact', id: 'contact' },
   ];
 
   const handleLinkClick = (id: string) => {
@@ -36,26 +35,6 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
 
   return (
     <>
-      {/* Top Clinical Banner */}
-      <div className="bg-brand-slate-light text-gray-600 text-xs py-2 px-4 border-b border-gray-200 transition-all hidden sm:block">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <span className="flex items-center gap-1.5 font-mono text-[11px] text-brand-teal font-semibold">
-              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              BOARD ELIGIBLE & RECIPIENT OF NATIONAL HONORS
-            </span>
-            <span className="text-gray-300">|</span>
-            <span className="text-gray-500">Clinical Center: Bambolim, Goa</span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <a href="tel:+919881954606" className="flex items-center gap-1 hover:text-brand-teal transition-colors font-semibold tracking-wide">
-              <Phone className="w-3.5 h-3.5 text-brand-teal" />
-              Emergency Line: +91 9881954606
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Bar */}
       <nav
         id="main-nav"
@@ -76,10 +55,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
               <div className="flex items-center space-x-2">
                 <span className="font-display font-semibold text-lg sm:text-xl tracking-tight text-brand-primary group-hover:text-brand-teal transition-colors">
                   DR. PRAVEEN SATISH
-                </span>
-                <span className="text-[10px] uppercase font-mono tracking-widest bg-brand-teal/10 text-brand-teal px-1.5 py-0.5 rounded-full border border-brand-teal/30">
-                  MDS, FDS RCPS
-                </span>
+                </span> 
               </div>
               <span className="text-xs text-gray-500 font-sans tracking-wide mt-0.5 font-medium">
                 Senior Maxillofacial & Oral Onco Surgeon

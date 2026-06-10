@@ -78,9 +78,6 @@ export default function ContactHub() {
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight mt-4">
             Clinical Consultation & Patient Intake
           </h2>
-          <p className="text-gray-600 font-sans mt-3 text-base sm:text-md">
-            Direct channels for diagnostic intakes and secure referring pathways for oncology, jaw osteotomies, and joint re-anchoring.
-          </p>
         </div>
 
         {/* Dual Panels Layout */}

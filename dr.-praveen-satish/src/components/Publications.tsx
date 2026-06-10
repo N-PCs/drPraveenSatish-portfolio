@@ -6,11 +6,11 @@ import { PublicationItem } from '../types';
 
 export default function Publications() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [activeType, setActiveType] = useState<'all' | 'journal' | 'lecture'>('all');
+  const [activeType, setActiveType] = useState<'journal' | 'lecture'>('journal');
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   const filteredItems = publicationsData.filter((pub) => {
-    const matchesType = activeType === 'all' || pub.type === activeType;
+    const matchesType = pub.type === activeType;
     const matchesSearch = 
       pub.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       pub.authors.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -34,14 +34,11 @@ export default function Publications() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-xs font-mono uppercase tracking-widest text-brand-teal font-extrabold bg-brand-teal/10 px-3 py-1 rounded-full">
-            THE SCIENTIFIC AUTHORITY
+            SCIENTIFIC RESEARCH
           </span>
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight mt-4">
             Research & Academic Publications
           </h2>
-          <p className="text-gray-600 font-sans mt-3 text-base sm:text-md">
-            Meticulously documented surgical outcomes and techniques indexed in global oncology and cleft journals.
-          </p>
         </div>
 
         {/* Database Search & Controls */}
@@ -63,16 +60,6 @@ export default function Publications() {
             {/* Publication Category Selector Toggles */}
             <div className="flex bg-brand-slate-light p-1 rounded-xl border border-gray-200">
               <button
-                onClick={() => setActiveType('all')}
-                className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-lg transition-all ${
-                  activeType === 'all'
-                    ? 'bg-brand-teal text-white shadow-xs'
-                    : 'text-gray-600 hover:text-brand-primary'
-                }`}
-              >
-                All Works
-              </button>
-              <button
                 onClick={() => setActiveType('journal')}
                 className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-lg transition-all ${
                   activeType === 'journal'
@@ -80,7 +67,7 @@ export default function Publications() {
                     : 'text-gray-600 hover:text-brand-primary'
                 }`}
               >
-                Journals
+                Publications
               </button>
               <button
                 onClick={() => setActiveType('lecture')}

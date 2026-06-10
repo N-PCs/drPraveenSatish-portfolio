@@ -48,9 +48,6 @@ export default function Portfolio() {
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight mt-4">
               Surgical Case Portfolio
             </h2>
-            <p className="text-gray-600 font-sans mt-3 text-sm sm:text-base leading-relaxed">
-              Demonstrating anatomical accuracy, rigorous margin clearances, and exact functional reconstruction. Click to expand advanced peer-focused details.
-            </p>
           </div>
 
           {/* Quick Disclaimer Pill */}

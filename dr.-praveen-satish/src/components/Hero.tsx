@@ -16,24 +16,10 @@ export default function Hero({ onNavigate }: HeroProps) {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-4 items-center">
           
           {/* Left Column - Content */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
-            
-            {/* Status Pill */}
-            <motion.div 
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center space-x-2 bg-brand-teal/10 border border-brand-teal/30 rounded-full px-3 py-1.5 w-fit mb-6"
-            >
-              <ShieldCheck className="w-4 h-4 text-brand-teal" />
-              <span className="text-brand-teal text-xs font-semibold tracking-wide uppercase font-mono">
-                DUAL BOARD-CERTIFIED SENIOR SURGEON
-              </span>
-            </motion.div>
-
             {/* Core Value Proposition Statement */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -151,58 +137,32 @@ export default function Hero({ onNavigate }: HeroProps) {
                   
                   {/* Aesthetic visual rendering: high quality Unsplash clinical portraits or high-fidelity clinical model */}
                   <img 
-                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600" 
+                    src="/dr-profile.jpeg"
                     alt="Dr. Praveen Satish surgical portrait backdrop representation" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-top opacity-95 transition-transform duration-500 group-hover:scale-[1.03]"
                   />
-
-                  {/* Absolute positioning metrics ribbon */}
-                  <div className="absolute bottom-4 left-4 right-4 bg-white/90 border border-brand-teal/30 px-4 py-3 rounded-xl backdrop-blur-md shadow-lg">
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <div className="text-[10px] font-mono text-brand-teal font-bold uppercase tracking-wider">PRIMARY DIRECTIVE</div>
-                        <div className="text-xs text-brand-primary font-bold mt-0.5">Clinical Security & Precision</div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-[10px] font-mono text-emerald-600 font-bold uppercase tracking-wider">OCCLUSAL INDEX</div>
-                        <div className="text-xs text-brand-primary font-bold mt-0.5">100% Alignment</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Patient reassuring card */}
                 <div className="mt-5 space-y-3">
                   <div className="flex items-start gap-3">
                     <div className="p-1 px-2 rounded-lg bg-brand-teal/10 border border-brand-teal/20 text-xs text-brand-teal font-mono font-bold">
-                      20+ Yrs
+                      19+ Yrs Experience
                     </div>
-                    <div className="text-xs text-gray-700 font-medium">
-                      Expert in conservative, organ-preserving micro-dissections.
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="p-1 px-2 rounded-lg bg-brand-teal/10 border border-brand-teal/20 text-xs text-brand-teal font-mono font-bold">
-                      India
-                    </div>
-                    <div className="text-xs text-gray-700 font-medium">
-                      In-patient clinical care backed by full Goa Medical College hospital infrastructure.
-                    </div>
+                                {/* Status Pill */}
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="p-1 px-2 rounded-lg bg-brand-teal/10 border border-brand-teal/20 text-xs text-brand-teal font-mono font-bold">
+              <span className="text-brand-teal text-xs font-semibold tracking-wide uppercase font-mono">
+                DUAL BOARD-CERTIFIED 
+              </span>
+            </motion.div>
                   </div>
                 </div>
 
-              </div>
-
-              {/* Float-badge decorative items */}
-              <div className="absolute -top-3 -right-3 bg-brand-teal text-white p-3.5 rounded-2xl shadow-xl animate-float block font-bold text-center border border-teal-500/20">
-                <div className="text-2xl leading-none">1k+</div>
-                <div className="text-[8px] tracking-wider uppercase font-mono mt-1 text-teal-100">Patients Restored</div>
-              </div>
-
-              <div className="absolute -bottom-4 -left-3 bg-white border border-brand-teal/30 p-3 rounded-xl shadow-lg flex items-center gap-2.5 backdrop-blur-md">
-                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                <div className="text-[10px] text-brand-primary font-bold font-mono tracking-wide">Ready for complex referrals</div>
               </div>
 
             </motion.div>

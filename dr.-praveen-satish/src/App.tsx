@@ -8,7 +8,7 @@ import AcademicTimeline from './components/AcademicTimeline';
 import Publications from './components/Publications';
 import FaqAccordion from './components/FaqAccordion';
 import ContactHub from './components/ContactHub';
-import { ArrowUp, Award, CheckCircle, ShieldAlert } from 'lucide-react';
+import { ArrowUp, Award, CheckCircle, ShieldAlert,Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
@@ -115,9 +115,7 @@ export default function App() {
                 <span className="font-display font-semibold text-lg text-white tracking-tight">
                   DR. PRAVEEN SATISH
                 </span>
-                <span className="text-[10px] uppercase font-mono tracking-widest bg-brand-teal/20 text-brand-teal px-1.5 py-0.5 rounded border border-brand-teal/35">
-                  MDS | FDS RCPS (UK) | Fellow AOCMF (Austria) | FIBOMS | FIBCSOMS | Diploma in Oral Cancer
-                </span>
+                
               </div>
               <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
                 Dual Board certified Senior Maxillofacial Surgeon with 20+ years of clinical and academic leadership and 1,000+ operative cases in oral oncology, complex reconstruction, and facial trauma. Internationally active leader— Senate member and Examination Director for the International Board (IBCSOMS) and AOCMF faculty.

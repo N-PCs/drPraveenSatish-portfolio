@@ -41,11 +41,8 @@ export default function AcademicTimeline() {
               </div>
               <div>
                 <h3 className="font-display font-bold text-xl text-brand-primary">
-                  Board Leadership & National Governance
+                  Board Leadership 
                 </h3>
-                <p className="text-xs text-gray-500 font-mono uppercase tracking-wider">
-                  International Board Director & Executive Roles
-                </p>
               </div>
             </div>
 
@@ -99,9 +96,6 @@ export default function AcademicTimeline() {
                 <h3 className="font-display font-bold text-xl text-brand-primary">
                   Academic Appointments & Specializations
                 </h3>
-                <p className="text-xs text-gray-500 font-mono uppercase tracking-wider">
-                  Fellowships & Clinical Teaching Timelines
-                </p>
               </div>
             </div>
 

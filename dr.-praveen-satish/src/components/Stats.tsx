@@ -7,24 +7,21 @@ export default function Stats() {
     {
       id: 'stat_leadership',
       value: '19+',
-      label: 'Years of Clinical Leadership',
-      subtext: 'Directing surgical oncology & trauma settings',
+      label: 'Years of Clinical Expertise',
       icon: Calendar,
       color: 'text-brand-teal bg-brand-teal/10 border-brand-teal/20',
     },
     {
       id: 'stat_cases',
       value: '1,000+',
-      label: 'Operative Cases Completed',
-      subtext: 'Active advanced surgical tumor & skeletal clearances',
+      label: 'Operative Cases',
       icon: Stethoscope,
       color: 'text-brand-teal bg-brand-teal/10 border-brand-teal/20',
     },
     {
       id: 'stat_lectures',
       value: '46+',
-      label: 'International Lectures Delivered',
-      subtext: 'Academic keynotes: Singapore, Canada, Ethiopia',
+      label: 'International Lectures ',
       icon: Presentation,
       color: 'text-brand-teal bg-brand-teal/10 border-brand-teal/20',
     },
@@ -32,7 +29,6 @@ export default function Stats() {
       id: 'stat_publications',
       value: '18+',
       label: 'Scientific Publications',
-      subtext: 'In top-tier peer-reviewed medical specialty journals',
       icon: FileText,
       color: 'text-brand-teal bg-brand-teal/10 border-brand-teal/20',
     },
@@ -65,9 +61,6 @@ export default function Stats() {
                   </div>
                   <div className="text-sm font-semibold text-gray-800 tracking-tight mt-1">
                     {stat.label}
-                  </div>
-                  <div className="text-xs text-gray-400 mt-1 leading-normal">
-                    {stat.subtext}
                   </div>
                 </div>
               </motion.div>
