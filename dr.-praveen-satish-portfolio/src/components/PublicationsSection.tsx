@@ -6,7 +6,7 @@ import { Publication } from '../types';
 
 export const PublicationsSection: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<'all' | Publication['category']>('all');
+  const [selectedCategory, setSelectedCategory] = useState<Publication['category']>('oncology');
   const [expandedPubId, setExpandedPubId] = useState<string | null>(null);
 
   const toggleAbstract = (id: string) => {
@@ -14,7 +14,7 @@ export const PublicationsSection: React.FC = () => {
   };
 
   const filteredPublications = PUBLICATIONS.filter((pub) => {
-    const matchesCategory = selectedCategory === 'all' || pub.category === selectedCategory;
+    const matchesCategory = pub.category === selectedCategory;
     const matchesSearch = 
       pub.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       pub.abstract.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -32,17 +32,14 @@ export const PublicationsSection: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-black mt-3 text-brand-dark tracking-tight">
           Scientific Contributions
         </h2>
-        <p className="text-slate-600 mt-3 max-w-lg mx-auto text-sm font-semibold">
-          A collection of index-linked academic papers investigating microvascular reconstruction, virtual planning tolerances, and oral oncology.
-        </p>
       </div>
 
       <div className="bg-white border border-slate-200/80 rounded-none p-5 md:p-6 lg:p-8 shadow-lg shadow-slate-100/50 space-y-6" id="publications-container">
         {/* Search & Category Filter Header wrapper */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-200/60">
-          {/* Category Tabs */}
-          <div className="flex flex-wrap gap-1.5" id="pub-tabs">
-            {['all', 'oncology', 'reconstruction', 'trauma', 'tmj'].map((cat) => (
+          {/* Category Tabs — scroll on mobile */}
+          <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-hide" id="pub-tabs" style={{ scrollbarWidth: 'none' }}>
+            {['oncology', 'reconstruction', 'trauma', 'tmj'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat as any)}
@@ -52,7 +49,7 @@ export const PublicationsSection: React.FC = () => {
                     : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
-                {cat === 'all' ? 'All Areas' : cat}
+                {cat}
               </button>
             ))}
           </div>

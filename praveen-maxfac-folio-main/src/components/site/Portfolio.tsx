@@ -79,7 +79,7 @@ const cases: CaseItem[] = [
   },
 ];
 
-const filters: Category[] = ["All", "Oral Cancer", "Facial Trauma", "TMJ & Pathology"];
+const filters: Exclude<Category, "All">[] = ["Oral Cancer", "Facial Trauma", "TMJ & Pathology"];
 
 function CaseCard({ item }: { item: CaseItem }) {
   const [revealed, setRevealed] = useState(!item.sensitive);
@@ -139,9 +139,9 @@ function CaseCard({ item }: { item: CaseItem }) {
 }
 
 export function Portfolio() {
-  const [active, setActive] = useState<Category>("All");
+  const [active, setActive] = useState<Exclude<Category, "All">>("Oral Cancer");
   const filtered = useMemo(
-    () => (active === "All" ? cases : cases.filter((c) => c.category === active)),
+    () => cases.filter((c) => c.category === active),
     [active]
   );
 
@@ -154,10 +154,6 @@ export function Portfolio() {
             <h2 className="text-3xl font-semibold text-foreground sm:text-4xl lg:text-5xl">
               Clinical evidence, presented with care.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Radiographic and post-operative views are visible by default. Intra-operative
-              imagery is masked behind a content warning for patient comfort.
-            </p>
           </div>
           <div className="flex flex-wrap gap-2">
             {filters.map((f) => (

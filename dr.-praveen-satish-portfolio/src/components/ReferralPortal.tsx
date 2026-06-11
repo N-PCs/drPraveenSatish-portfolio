@@ -88,9 +88,6 @@ export const ReferralPortal: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-black mt-3 text-brand-dark tracking-tight">
             Inter-Professional Colleague Hub
           </h2>
-          <p className="text-slate-600 mt-3 max-w-lg mx-auto text-sm font-semibold">
-            For general outpatients seeking direct consultation lines, or medical practitioners requesting co-management of complex cases.
-          </p>
         </div>
 
         {/* Dual-Action Grid utilizing Stark White Containers on Dark background as specified in details */}
@@ -195,7 +192,7 @@ export const ReferralPortal: React.FC = () => {
 
               {/* Interactive Referral Submission Form */}
               <form onSubmit={handleReferralSubmit} className="mt-8 space-y-4 text-xs">
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="space-y-1">
                     <label className="font-mono uppercase text-[9px] text-slate-500 font-bold">Your Name (Dr.) *</label>
                     <input
@@ -221,7 +218,7 @@ export const ReferralPortal: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="col-span-2 space-y-1">
                     <label className="font-mono uppercase text-[9px] text-slate-500 font-bold">Patient Name *</label>
                     <input
@@ -247,7 +244,7 @@ export const ReferralPortal: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="space-y-1">
                     <label className="font-mono uppercase text-[9px] text-slate-500 font-bold">Specialty Focus *</label>
                     <select

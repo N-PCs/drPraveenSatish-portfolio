@@ -1,4 +1,3 @@
-import portrait from "@/assets/dr-praveen-portrait.jpg";
 import { ArrowRight } from "lucide-react";
 
 const badges = [
@@ -25,7 +24,7 @@ export function Hero() {
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             Dual board certified senior maxillofacial surgeon with{" "}
-            <span className="font-medium text-foreground">20+ years</span> of
+            <span className="font-medium text-foreground">19+ years</span> of
             clinical and academic leadership and over{" "}
             <span className="font-medium text-foreground">1,000 operative cases</span>{" "}
             in oral oncology, complex reconstruction, and facial trauma. Internationally active leader— Senate member and Examination Director for the International Board (IBCSOMS) and AOCMF faculty.
@@ -75,7 +74,7 @@ export function Hero() {
             <div className="absolute -inset-4 -z-10 rounded-2xl bg-gradient-to-br from-accent/10 to-transparent blur-2xl" />
             <div className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-elevated">
               <img
-                src={portrait}
+                src="/dr-profile.jpeg"
                 alt="Dr. Praveen Satish, Maxillofacial and Oral Onco Surgeon"
                 width={896}
                 height={1152}

@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const metrics = [
-  { value: 19, suffix: "+", label: "Years Clinical Leadership" },
-  { value: 1000, suffix: "+", label: "Operative Cases Completed" },
-  { value: 46, suffix: "+", label: "International & National Lectures" },
-  { value: 18, suffix: "+", label: "Peer-Reviewed Publications" },
+  { value: 19, suffix: "+", label: "Years of Clinical Expertise" },
+  { value: 1000, suffix: "+", label: "Operative Cases" },
+  { value: 46, suffix: "+", label: "International Lectures" },
+  { value: 18, suffix: "+", label: "Scientific Publications" },
 ];
 
 function Counter({ to, suffix }: { to: number; suffix: string }) {

@@ -7,7 +7,6 @@ const links = [
   { href: "#portfolio", label: "Surgical Portfolio" },
   { href: "#timeline", label: "Academic Timeline" },
   { href: "#publications", label: "Publications" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export function Navbar() {

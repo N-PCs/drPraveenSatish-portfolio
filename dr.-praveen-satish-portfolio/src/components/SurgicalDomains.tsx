@@ -23,9 +23,6 @@ export const SurgicalDomains: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-black mt-3 text-brand-dark tracking-tight">
           Core Surgical Domains
         </h2>
-        <p className="text-slate-600 mt-3 max-w-2xl mx-auto text-sm font-semibold">
-          Dual board-certified surgical intervention prioritizing organ preservation, microscopic margin clearance, and structural bone rehabilitation.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="domains-grid">

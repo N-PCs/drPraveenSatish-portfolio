@@ -86,7 +86,7 @@ export const AppointmentBooker: React.FC<AppointmentBookerProps> = ({ isOpen, on
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 overflow-y-auto" id="booker-modal-container">
+        <div className="fixed inset-0 z-50 flex items-start justify-center pt-4 pb-4 md:pt-6 md:pb-6 overflow-y-auto px-3 md:px-6" id="booker-modal-container">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -101,10 +101,10 @@ export const AppointmentBooker: React.FC<AppointmentBookerProps> = ({ isOpen, on
             initial={{ scale: 0.95, opacity: 0, y: 30 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 30 }}
-            className="bg-white border border-slate-200 rounded-none w-full max-w-4xl relative z-10 overflow-hidden shadow-2xl flex flex-col md:flex-row my-8"
+            className="bg-white border border-slate-200 rounded-none w-full max-w-4xl relative z-10 overflow-hidden shadow-2xl flex flex-col md:flex-row my-2 md:my-8"
           >
             {/* Left Column: Direct Consultation Info & Bookings list */}
-            <div className="w-full md:w-5/12 bg-slate-50 p-6 md:p-8 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col justify-between">
+            <div className="w-full md:w-5/12 bg-slate-50 p-5 md:p-8 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2 mb-6">
                   <Building className="w-4 h-4 text-[#003770]" />

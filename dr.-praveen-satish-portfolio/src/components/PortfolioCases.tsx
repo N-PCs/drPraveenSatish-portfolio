@@ -18,9 +18,9 @@ export const PortfolioCases: React.FC = () => {
   };
 
   return (
-    <section className="relative py-16 px-4 md:px-8 max-w-7xl mx-auto z-10 border-t border-brand-pale/40" id="portfolio">
-      <div className="pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" id="portfolio-peeking-cards">
+    <section className="relative py-12 sm:py-16 px-4 md:px-8 max-w-7xl mx-auto z-10 border-t border-brand-pale/40" id="portfolio">
+      <div className="pb-16 sm:pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="portfolio-peeking-cards">
           {CASE_STUDIES.map((caseStudy, idx) => {
             const isConsented = consentedCases[caseStudy.id] || false;
             return (
@@ -151,7 +151,7 @@ export const PortfolioCases: React.FC = () => {
               initial={{ scale: 0.95, opacity: 0, y: 30 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 30 }}
-              className="bg-white border border-slate-200 rounded-none w-full max-w-4xl overflow-hidden shadow-2xl relative z-10 flex flex-col lg:flex-row"
+              className="bg-white border border-slate-200 rounded-none w-full max-w-4xl overflow-hidden shadow-2xl relative z-10 flex flex-col lg:flex-row max-h-[90vh] overflow-y-auto"
             >
               {/* Close Button */}
               <button
@@ -168,7 +168,7 @@ export const PortfolioCases: React.FC = () => {
                   <span className="text-[10px] uppercase font-bold font-mono text-emerald-800 bg-emerald-100/70 border border-emerald-200 px-3 py-1 rounded-none w-fit">
                     Interactive Clinical Scanning
                   </span>
-                  <div className="relative rounded-none overflow-hidden h-72 border border-brand-pale bg-black flex items-center justify-center">
+                  <div className="relative rounded-none overflow-hidden h-44 sm:h-64 border border-brand-pale bg-black flex items-center justify-center">
                     <img
                       src={selectedCase.radiographUrl}
                       alt="Mandibular radiograph orthopantomogram scan"
@@ -180,7 +180,7 @@ export const PortfolioCases: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="relative rounded-none overflow-hidden h-72 border border-brand-pale bg-black flex items-center justify-center">
+                  <div className="relative rounded-none overflow-hidden h-44 sm:h-64 border border-brand-pale bg-black flex items-center justify-center">
                     <img
                       src={selectedCase.intraOpGraphicUrl}
                       alt="Intraoperative planning scaffold mapping"

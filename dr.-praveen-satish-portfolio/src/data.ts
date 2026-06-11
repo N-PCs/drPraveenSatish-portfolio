@@ -4,54 +4,98 @@ export const SURGICAL_DOMAINS: SurgicalDomain[] = [
   {
     id: 'oncology',
     title: 'Oral Oncology & Ablative Surgery',
-    description: 'Advanced tumor resections, jaw cancer therapeutics, and precancerous lesion excisions with strict margin controls.',
-    longDescription: 'Dr. Praveen Satish provides comprehensive diagnostic and surgical therapeutic management for malignant and benign tumors of the oral cavity and surrounding structures. Utilizing intraoperative margin monitoring and cutting-edge medical planning, therapy focuses on maximizing local control while optimizing conditions for immediate functional reconstruction.',
-    iconName: 'ShieldAlert',
+    subtitle: 'Head & Neck Cancer Resections',
+    description: 'Aggressive oncological resections of oral cavity squamous cell carcinomas, salivary tumors, and bone-invasive sarcomas.',
+    longDescription: 'Comprehensive oncological management of head and neck cancers, prioritizing radical tumor clearance (wide local excision, segmental mandibulectomies) alongside anatomical and functional preservation of vital surrounding tissues.',
     highlights: [
-      'Edge-clearance precision resections',
-      'Minimally invasive sentinel node biopsy',
-      'Comprehensive neck dissection management',
-      'Precancerous status screening & laser ablations'
-    ]
+      'Wide Local Excision of Oral Squamous Cell Carcinoma (OSCC)',
+      'Segmental & Marginal Mandibulectomy',
+      'Selective & Modified Radical Neck Dissections (Levels I-V)',
+      'Management of Complex Maxillary & Sinus Malignancies',
+      'Salivary Gland Tumor Resection (Parotidectomy)'
+    ],
+    clinicalSignificance: 'Achieving safe oncological margins while carefully preserving sensory and motor nerves, ensuring optimal conditions for subsequent structural reconstruction.',
+    iconName: 'ShieldAlert'
   },
   {
     id: 'reconstruction',
-    title: 'Advanced Reconstructive Flaps',
-    description: 'Complex microvascular free flaps and regional pedicled flaps restoring critical oral functions, occlusion, and facial harmony.',
-    longDescription: 'Restoring facial symmetry, mastication, and speech pathways after tumor ablative surgery or trauma. Dr. Satish specializes in customizing osteocutaneous free flaps (such as fibula, iliac crest) and soft tissue free flaps (anterolateral thigh, radial forearm) to perfectly match the patient’s anatomical defects.',
-    iconName: 'Sparkles',
+    title: 'Advanced Reconstructive Surgery',
+    subtitle: 'Locoregional Flaps & Microdissection',
+    description: 'Restoring oral competence, function, and facial appearance using highly specialized pedicled tissue transfers.',
+    longDescription: 'Restoring facial symmetry, mastication, and speech pathways after tumor ablative surgery or trauma. Focuses on local, regional, and myofascial flaps, and strategic microdissection techniques to reconstruct the tongue, palate, and jaw.',
     highlights: [
-      'Microvascular free fibula jaw mapping',
-      'Anterolateral Thigh (ALT) soft tissue flaps',
-      'Computer-aided custom plates & Guides (CAD/CAM)',
-      'Simultaneous dental implant reconstruction'
-    ]
+      'Pectoralis Major Myocutaneous (PMMC) Flap Reconstruction',
+      'Nasolabial & Buccal Fat Pad Local Flap Procedures',
+      'Temporalis Myofascial Flaps for Maxillary Defects',
+      'Functional Reconstruction of Tongue Defects (K-Technique)',
+      'Anatomical Restructuring of Oral Competence & Sphincter'
+    ],
+    clinicalSignificance: 'Transitioning the patient smoothly from a debilitating postoperative state back to fluent oral communication and swallowing.',
+    iconName: 'Sparkles'
   },
   {
     id: 'trauma',
-    title: 'Maxillofacial Trauma & Rigid Fixation',
-    description: 'Emergency and delayed secondary correction of skull, orbital, and jaw fractures utilizing customized titanium plating.',
-    longDescription: 'Treating complex facial skeleton trauma with dual-board precision, minimizing visible external scars while restoring perfect dental alignment (occlusion) and orbital volumes. Using virtual surgical planning (VSP) to pre-bend premium titanium load-sharing plates for custom anatomical fit.',
-    iconName: 'Activity',
+    title: 'Maxillofacial Trauma Surgery',
+    subtitle: 'Pan-Facial Fractures & Rigid Fixation',
+    description: 'Reconstruction of complex craniomaxillofacial skeletal injuries, restoring pre-injury alignment, speech, and mastication.',
+    longDescription: 'Surgical management of acute and secondary pan-facial trauma. Utilizes advanced surgical approaches for anatomic reductions and internal rigid fixation of zygomaticomaxillary, orbital, and mandibular skeletal fractures.',
     highlights: [
-      'Comminuted mandibular & subcondylar fractures',
-      'Orbitomalar complex re-contouring & mesh',
-      'Internal rigid fixation with transoral access',
-      '3D-planned secondary post-traumatic corrections'
-    ]
+      'Open Reduction & Internal Fixation (ORIF) of Mandible & Maxilla',
+      'Orbital Floor Reconstruction using Titanium Mesh and Autologous Bone',
+      'Management of Condylar Fractures of the Temperomandibular Joint',
+      'Reduction of Zygomaticomaxillary Complex (ZMC) Fractures',
+      'Emergency Management of Craniomaxillofacial Skeletal Trauma'
+    ],
+    clinicalSignificance: 'Precision alignment matching occlusion exactly, avoiding cranial asymmetry, double vision (diplopia), or chewing disorders.',
+    iconName: 'Activity'
   },
   {
     id: 'tmj',
-    title: 'TMJ Arthroscopy & Joint Replacement',
-    description: 'Restorative diagnostics and complete surgical relief for severe TMJ ankylosis, arthrose, and persistent pain syndromes.',
-    longDescription: 'Providing elite diagnostic arthroscopy, joint lavage, and complete customized joint replacements (TMJR) for patients suffering from persistent temporomandibular joint ankylosis, internal disc derangements, or rheumatoid joint destruction.',
-    iconName: 'Maximize2',
+    title: 'TMJ Surgery & Arthroscopy',
+    subtitle: 'Lysis, Lavage, and Total Joint Replacement',
+    description: 'Resolving severe jaw lock, arthritic degradation, and chronic TMJ disorders using minimally invasive to total joint replacements.',
+    longDescription: 'Highly specialized TMJ interventions ranging from diagnostics and therapeutic joint arthroscopy (lysis, lavage) to open TMJ arthroplasty, treatment of recurrent ankylosis, and custom or stock total joint reconstruction.',
     highlights: [
-      'Minimally invasive TMJ lysis & lavage',
-      'Alloplastic custom-made joint replacement',
-      'Autogenous bone grafts for TMJ ankylosis',
-      'Trigger point & arthrocentesis relief'
-    ]
+      'Minimally Invasive TMJ Arthroscopy & Lysis/Lavage',
+      'Meniscectomy & TMJ Disc Repositioning/Anchor Plasty',
+      'Release of TMJ Bony Ankylosis with Temporalis Interposition Flap',
+      'Custom Patient-Specific Total Joint Replacement (TJR)',
+      'Management of Condylar Hyperplasia and TMJ Internal Derangement'
+    ],
+    clinicalSignificance: 'Restoring optimal inter-incisal distance, relieving chronic temporomandibular pain, and improving standard chewing mechanics.',
+    iconName: 'Maximize2'
+  },
+  {
+    id: 'orthognathic',
+    title: 'Orthognathic & Structural Jaw Surgery',
+    subtitle: 'Corrective Jaw Surgery',
+    description: 'Repositioning the maxilla and mandible to correct facial asymmetry, severe bite malocclusion, and sleep apnea.',
+    longDescription: 'Aesthetic and functional transformation through surgical repositioning of the middle and lower facial skeletal framework. Coordinates deeply with orthodontics to solve congenital dentofacial deformities and sleep apnea.',
+    highlights: [
+      'Le Fort I Osteotomy for Maxillary Repositioning',
+      'Bilateral Sagittal Split Osteotomy (BSSO) of the Mandible',
+      'Genioplasty / Chin Sculpting and Advancement',
+      'Correction of Hemifacial Microsomia & Facial Asymmetry',
+      'Surgical Expansion of the Airway for Obstructive Sleep Apnea'
+    ],
+    clinicalSignificance: 'Simultaneous correction of chewing function, severe airway restriction, and proportional facial aesthetics.',
+    iconName: 'Activity'
+  },
+  {
+    id: 'implantology',
+    title: 'Advanced Implantology & Minor Procedures',
+    subtitle: 'Aesthetic Dental Reconstruction & Bone Grafting',
+    description: 'Restorations in compromise bone sites using advanced sinus lifts, ridge splits, and zygomatic implants.',
+    longDescription: 'Rehabilitating complete or partial tooth loss using advanced implant fixtures in extremely resorbed bone. Includes ridge augmentations, sinus lift procedures, and computer-guided implant planning for immediate functional loading.',
+    highlights: [
+      'Anterior Maxillary Aesthetic Single-Implant Restorations',
+      'Zygomatic & Pterygoid Implants for Severe Maxillary Resorption',
+      'Direct and Indirect Sinus Lift with Bone Grafting (Autologous/Xenograft)',
+      'Alveolar Ridge Split & Expansion Techniques',
+      'Surgical Removal of Impacted Third Molars (Wisdom Teeth)'
+    ],
+    clinicalSignificance: 'Providing permanent structural support for functional prosthetics even in cases of severe long-term bone atrophy.',
+    iconName: 'Maximize2'
   }
 ];
 
@@ -85,21 +129,24 @@ export const CASE_STUDIES: CaseStudy[] = [
 ];
 
 export const TIMELINE_EVENTS: TimelineEvent[] = [
-  // Education
-  { year: '2024', title: 'Diploma in Oral Oncology', institution: 'AOCMF', description: 'Specialized advanced training.', type: 'academic' },
-  { year: '2023', title: 'Diploma of Fellowship', institution: 'FDS RCPS (Glasgow)', description: 'Fellow of the Royal College of Physicians and Surgeons.', type: 'academic' },
-  { year: '2015', title: 'Fellowship in CMF Surgery', institution: 'University Klinik Innsbruck, Austria', description: 'Specialized Cranio-Maxillofacial Surgery training.', type: 'academic' },
-  { year: '2007', title: 'MDS: Oral & Maxillofacial Surgery', institution: 'Rajiv Gandhi University of Health Sciences', description: 'Passed with first class marks.', type: 'academic' },
-
+  // Leadership & Administration
+  { id: 'admin_1', year: 'Present', title: 'Senate Member', institution: 'IBSCOMS', category: 'leadership', description: 'Governing board member establishing certification protocols.', highlight: 'Global Certification Standards' },
+  { id: 'admin_2', year: '2023 - 2024', title: 'President', institution: 'Goa State Chapter of AOMSI', category: 'leadership', description: 'Led state-level oral and maxillofacial surgical initiatives and continued medical education programs.', highlight: 'State Surgical Leadership' },
+  { id: 'admin_3', year: '2021 - 2022', title: 'Vice President', institution: 'Goa State Chapter of AOMSI', category: 'leadership', description: 'Supported presidential duties and coordinated regional conferences.', highlight: 'Regional Leadership' },
+  { id: 'admin_4', year: '2019', title: 'Scientific Chair', institution: 'AOMSI Master Class', category: 'leadership', description: 'Curated and managed the scientific program for the national master class.', highlight: 'Scientific Program Direction' },
+  { id: 'admin_5', year: '2015 - 2016', title: 'President', institution: 'IDA Goa State Branch', category: 'leadership', description: 'Presided over the Indian Dental Association state branch.', highlight: 'Dental Association Leadership' },
+  { id: 'admin_6', year: '2014 - 2019', title: 'Secretary', institution: 'Goa chapter Of AOMSI', category: 'leadership', description: 'Managed administrative and organizational duties for the state chapter.', highlight: 'Organizational Management' },
+  
   // Employment
-  { year: '2009 - 2026', title: 'Consultant Maxillofacial Surgeon', institution: 'Goa Medical College and Hospital', description: 'Handling complex trauma and oncology cases.', type: 'clinical' },
-  { year: '2014 - 2026', title: 'Assistant Professor, Dept of OMFS', institution: 'Goa Dental College and Hospital', description: 'Academic teaching and surgical guidance.', type: 'academic' },
-
-  // Leadership
-  { year: 'Present', title: 'Senate Member & Exam Director', institution: 'IBSCOMS', description: 'International Board Certification direction.', type: 'leadership' },
-  { year: '2023 - 2024', title: 'President', institution: 'Goa State Chapter of AOMSI', description: 'Led state-level oral and maxillofacial surgical initiatives.', type: 'leadership' },
-  { year: '2015 - 2016', title: 'President', institution: 'IDA Goa State Branch', description: 'Presided over the Indian Dental Association state branch.', type: 'leadership' },
-  { year: '2014 - 2019', title: 'Secretary', institution: 'Goa chapter Of AOMSI', description: 'State-level organizational administration.', type: 'leadership' }
+  { id: 'emp_1', year: '2009 - 2026', title: 'Consultant Maxillofacial Surgeon', institution: 'Goa Medical College and Hospital', category: 'academic', description: 'Consultant Surgeon handling complex maxillofacial trauma and oncology cases.', highlight: 'Tertiary Care Consultant' },
+  { id: 'emp_2', year: '2014 - 2026', title: 'Assistant Professor, Dept of OMFS', institution: 'Goa Dental College and Hospital', category: 'academic', description: 'Academic faculty responsible for training postgraduate residents.', highlight: 'Postgraduate Educator' },
+  { id: 'emp_3', year: '2009 - 2014', title: 'Senior Lecturer, Dept of OMFS', institution: 'Goa Dental College and Hospital', category: 'academic', description: 'Lectured undergraduate and postgraduate dental students in OMFS.', highlight: 'Academic Lecturer' },
+  
+  // Education & Training
+  { id: 'edu_1', year: '2024 - 2025', title: 'Diploma in Oral Oncology', institution: 'AOCMF', category: 'fellowship', description: 'Advanced specialized training in oral oncological resections.', highlight: 'Oncology Specialization' },
+  { id: 'edu_2', year: '2023', title: 'Diploma of Fellowship', institution: 'FDS RCPS (Glasgow)', category: 'fellowship', description: 'Elected Fellow of the Royal College of Physicians and Surgeons of Glasgow.', highlight: 'International Fellowship' },
+  { id: 'edu_3', year: '2015', title: 'Fellowship in Cranio-Maxillo-Facial Surgery', institution: 'University Klinik Innsbruck, Austria', category: 'fellowship', description: 'European fellowship focusing on complex facial reconstruction.', highlight: 'Craniofacial Reconstruction' },
+  { id: 'edu_4', year: '2004 - 2007', title: 'Master of Dental Surgery (MDS): OMFS', institution: 'Rajiv Gandhi University of Health Sciences', category: 'credential', description: 'Passed with first class marks. Specialized in Oral & Maxillofacial Surgery.', highlight: 'Highest Marks Award' }
 ];
 
 export const PUBLICATIONS: Publication[] = [

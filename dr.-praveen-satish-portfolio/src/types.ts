@@ -1,10 +1,12 @@
 export interface SurgicalDomain {
   id: string;
   title: string;
+  subtitle: string;
   description: string;
   longDescription: string;
-  iconName: string;
   highlights: string[];
+  clinicalSignificance: string;
+  iconName: string;
 }
 
 export interface CaseStudy {
@@ -22,11 +24,13 @@ export interface CaseStudy {
 }
 
 export interface TimelineEvent {
+  id: string;
   year: string;
   title: string;
   institution: string;
+  category: 'leadership' | 'academic' | 'fellowship' | 'credential';
   description: string;
-  type: 'academic' | 'clinical' | 'leadership' | 'award';
+  highlight: string;
 }
 
 export interface Publication {

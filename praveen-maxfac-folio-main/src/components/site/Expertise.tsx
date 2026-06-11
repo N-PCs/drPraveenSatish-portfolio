@@ -49,10 +49,6 @@ export function Expertise() {
           <h2 className="text-3xl font-semibold text-foreground sm:text-4xl lg:text-5xl">
             Six surgical domains, refined over two decades.
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            A focused practice across the full spectrum of maxillofacial and oral oncologic
-            care — from primary resection to reconstructive rehabilitation.
-          </p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
