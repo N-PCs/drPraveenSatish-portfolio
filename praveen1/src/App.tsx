@@ -104,81 +104,25 @@ export default function App() {
         <ContactHub />
       </main>
 
-      {/* Trust-Focused Medical Footprint Footer */}
-      <footer className="bg-brand-primary text-gray-400 border-t border-white/5 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-12">
-            
-            {/* Left Brand Summary Column */}
-            <div className="md:col-span-5 space-y-4">
-              <div className="flex items-center space-x-2">
-                <span className="font-display font-semibold text-lg text-white tracking-tight">
-                  DR. PRAVEEN SATISH
-                </span>
-                
-              </div>
-              <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
-                Dual Board certified Senior Maxillofacial Surgeon with 20+ years of clinical and academic leadership and 1,000+ operative cases in oral oncology, complex reconstruction, and facial trauma. Internationally active leader— Senate member and Examination Director for the International Board (IBCSOMS) and AOCMF faculty.
-              </p>
-              
-              {/* Licensure & Registry note */}
-              <div className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 rounded px-3 py-1.5 text-[10px] text-gray-300 font-mono">
-                <CheckCircle className="w-3.5 h-3.5 text-brand-teal shrink-0" />
-                <span>Certified Specialist: Dental Council of India (Reg. No: A-5211)</span>
-              </div>
-            </div>
-
-            {/* Middle Quick Links Sitemap Column */}
-            <div className="md:col-span-3 space-y-4">
-              <h4 className="text-xs font-mono uppercase tracking-widest text-white font-bold">
-                Navigational Sitemap
-              </h4>
-              <div className="grid grid-cols-2 gap-2 text-xs">
-                <button onClick={() => navigateToSection('home')} className="hover:text-brand-teal transition-all text-left block cursor-pointer">Home Hub</button>
-                <button onClick={() => navigateToSection('expertise')} className="hover:text-brand-teal transition-all text-left block cursor-pointer">Expertise</button>
-                <button onClick={() => navigateToSection('portfolio')} className="hover:text-brand-teal transition-all text-left block cursor-pointer">Portfolio Cases</button>
-                <button onClick={() => navigateToSection('academic')} className="hover:text-brand-teal transition-all text-left block cursor-pointer">Timeline Pedigree</button>
-                <button onClick={() => navigateToSection('research')} className="hover:text-brand-teal transition-all text-left block cursor-pointer">Science & Papers</button>
-                <button onClick={() => navigateToSection('faq')} className="hover:text-brand-teal transition-all text-left block cursor-pointer">FAQ Prep</button>
-                <button onClick={() => navigateToSection('contact')} className="hover:text-brand-teal transition-all text-left block cursor-pointer font-semibold text-brand-teal">Consultation Portal</button>
-              </div>
-            </div>
-
-            {/* Right Urgent Clinical Triage Disclaimer */}
-            <div className="md:col-span-4 space-y-4 bg-white/5 border border-white/10 p-5 rounded-lg">
-              <div className="flex items-center gap-2">
-                <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
-                <h4 className="text-xs font-mono uppercase tracking-widest text-white font-bold">
-                  Clinical & Legal Triage Disclaimer
-                </h4>
-              </div>
-              <p className="text-[11px] text-gray-400 leading-relaxed font-sans">
-                Notice: The information presented across this clinical portfolio is curated to demonstrate board-caliber surgical outcomes for peers and prospective patients. It does not replace on-call direct head/neck emergency evaluations.
-              </p>
-              <div className="text-[10px] font-mono text-gray-400">
-                Goa Medical College Emergency Room is operational 24/7/365 for immediate pan-facial trauma/airway block management.
-              </div>
-            </div>
-
+     {/* FIXED STATIC BRANDING FOOTER */}
+      <footer className="bg-black py-12 px-4 md:px-8 border-t border-white/5 text-center text-xs text-slate-500" id="global-footer">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-left font-mono">
+            <p className="text-slate-300 font-extrabold">DR. PRAVEEN SATISH</p>
+            <p className="text-[12px] text-slate-500">Dual Board-Certified Maxillofacial & Oral Onco Surgeon</p>
           </div>
-
-          {/* Sub Footer Legal Credits and Boards logos */}
-          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] font-sans">
-            <div>
-              &copy; {new Date().getFullYear()} Dr. Praveen Satish. All academic and clinical rights reserved.
-            </div>
-            
-            <div className="flex items-center space-x-4 text-gray-500">
-              <span className="hover:text-brand-teal transition-colors">HIPAA Compliant Intakes</span>
-              <span>&bull;</span>
-              <span className="hover:text-brand-teal transition-colors">Evidence-Based Medicine</span>
-              <span>&bull;</span>
-              <span className="hover:text-brand-teal transition-colors">AOCMF Alumnus</span>
-            </div>
+          <div className="flex flex-wrap justify-center gap-6 text-[11px] text-slate-400">
+            <button onClick={() => handleScrollToSection('profile')} className="hover:text-white transition-colors">Home</button>
+            <button onClick={() => handleScrollToSection('portfolio')} className="hover:text-white transition-colors">Case Portfolio</button>
+            <button onClick={() => handleScrollToSection('timeline')} className="hover:text-white transition-colors">Academic Milestones</button>
+            <button onClick={() => handleScrollToSection('publications')} className="hover:text-white transition-colors">Publications</button>
           </div>
-
+          <p className="text-[12px]">
+            &copy; {new Date().getFullYear()} Dr. Praveen Satish.All rights reserved.
+          </p>
         </div>
       </footer>
+
 
       {/* Floating back-to-top button */}
       <AnimatePresence>
