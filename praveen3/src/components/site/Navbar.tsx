@@ -28,7 +28,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-10 lg:py-4">
         <a href="#home" className="flex flex-col leading-tight">
           <span className="text-sm font-semibold tracking-[0.18em] text-foreground">
             DR. PRAVEEN SATISH

@@ -42,16 +42,16 @@ const items = [
 
 export function Expertise() {
   return (
-    <section id="expertise" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="expertise" className="py-16 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
         <div className="max-w-2xl">
-          <p className="eyebrow mb-4">Core Expertise</p>
-          <h2 className="text-3xl font-semibold text-foreground sm:text-4xl lg:text-5xl">
+          <p className="eyebrow mb-3 lg:mb-4">Core Expertise</p>
+          <h2 className="text-2xl font-semibold text-foreground sm:text-3xl lg:text-5xl">
             Six surgical domains, refined over two decades.
           </h2>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
           {items.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}

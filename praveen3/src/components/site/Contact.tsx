@@ -3,16 +3,16 @@ import clinic from "@/assets/clinic-interior.jpg";
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="contact" className="relative py-16 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
         <div className="max-w-2xl">
-          <p className="eyebrow mb-4">Patient & Referral Hub</p>
-          <h2 className="text-3xl font-semibold text-foreground sm:text-4xl lg:text-5xl">
+          <p className="eyebrow mb-3 lg:mb-4">Patient & Referral Hub</p>
+          <h2 className="text-2xl font-semibold text-foreground sm:text-3xl lg:text-5xl">
             Two paths in — both received with care.
           </h2>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-5 lg:mt-16 lg:grid-cols-2 lg:gap-6">
           {/* Card A — Patients */}
           <div className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-8 shadow-card transition-all hover:shadow-elevated lg:p-10">
             <div className="flex items-center gap-3">

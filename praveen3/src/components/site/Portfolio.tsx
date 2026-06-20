@@ -13,7 +13,6 @@ interface CaseItem {
   summary: string;
   image: string;
   sensitive: boolean;
-  span: "tall" | "wide" | "square";
 }
 
 const cases: CaseItem[] = [
@@ -25,7 +24,6 @@ const cases: CaseItem[] = [
       "Composite resection of T2 SCC tongue with primary closure using the K-technique, preserving articulation and deglutition.",
     image: caseOncology,
     sensitive: true,
-    span: "tall",
   },
   {
     id: "c2",
@@ -35,7 +33,6 @@ const cases: CaseItem[] = [
       "Three-dimensional reconstruction of pan-facial fractures via titanium mesh and rigid internal fixation.",
     image: caseTrauma,
     sensitive: false,
-    span: "square",
   },
   {
     id: "c3",
@@ -45,7 +42,6 @@ const cases: CaseItem[] = [
       "Minimally invasive arthroscopy for internal derangement of the TMJ with restored translation.",
     image: caseTmj,
     sensitive: false,
-    span: "wide",
   },
   {
     id: "c4",
@@ -55,7 +51,6 @@ const cases: CaseItem[] = [
       "Superficial parotidectomy for pleomorphic adenoma with complete preservation of the facial nerve.",
     image: caseOncology,
     sensitive: true,
-    span: "square",
   },
   {
     id: "c5",
@@ -65,7 +60,6 @@ const cases: CaseItem[] = [
       "Transconjunctival approach with patient-specific implant for orbital blowout fracture.",
     image: caseTrauma,
     sensitive: false,
-    span: "tall",
   },
   {
     id: "c6",
@@ -75,7 +69,6 @@ const cases: CaseItem[] = [
       "Segmental resection with reconstruction plate and locoregional flap coverage.",
     image: caseTmj,
     sensitive: true,
-    span: "wide",
   },
 ];
 
@@ -83,17 +76,9 @@ const filters: Exclude<Category, "All">[] = ["Oral Cancer", "Facial Trauma", "TM
 
 function CaseCard({ item }: { item: CaseItem }) {
   const [revealed, setRevealed] = useState(!item.sensitive);
-  const spanClass =
-    item.span === "tall"
-      ? "row-span-2"
-      : item.span === "wide"
-        ? "md:col-span-2"
-        : "";
 
   return (
-    <article
-      className={`group relative overflow-hidden rounded-2xl border border-border bg-surface shadow-card transition-all hover:shadow-elevated ${spanClass}`}
-    >
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-card transition-all hover:shadow-elevated">
       <div className="relative aspect-[4/3] overflow-hidden bg-foreground">
         <img
           src={item.image}
@@ -129,10 +114,10 @@ function CaseCard({ item }: { item: CaseItem }) {
           </button>
         )}
       </div>
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-5 lg:p-6">
         <p className="eyebrow text-[10px]">{item.category}</p>
         <h3 className="mt-2 text-base font-semibold text-foreground">{item.title}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.summary}</p>
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{item.summary}</p>
       </div>
     </article>
   );
@@ -146,12 +131,12 @@ export function Portfolio() {
   );
 
   return (
-    <section id="portfolio" className="bg-surface-2 py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+    <section id="portfolio" className="bg-surface-2 py-16 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="eyebrow mb-4">Surgical Portfolio</p>
-            <h2 className="text-3xl font-semibold text-foreground sm:text-4xl lg:text-5xl">
+            <p className="eyebrow mb-3 lg:mb-4">Surgical Portfolio</p>
+            <h2 className="text-2xl font-semibold text-foreground sm:text-3xl lg:text-5xl">
               Clinical evidence, presented with care.
             </h2>
           </div>
@@ -172,7 +157,7 @@ export function Portfolio() {
           </div>
         </div>
 
-        <div className="mt-14 grid auto-rows-[minmax(0,1fr)] grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-6">
           {filtered.map((c) => (
             <CaseCard key={c.id} item={c} />
           ))}

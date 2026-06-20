@@ -122,16 +122,16 @@ export function Publications() {
   }, [tab, q]);
 
   return (
-    <section id="publications" className="bg-surface-2 py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="publications" className="bg-surface-2 py-16 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
         <div className="max-w-2xl">
-          <p className="eyebrow mb-4">Research & Publications</p>
-          <h2 className="text-3xl font-semibold text-foreground sm:text-4xl lg:text-5xl">
+          <p className="eyebrow mb-3 lg:mb-4">Research & Publications</p>
+          <h2 className="text-2xl font-semibold text-foreground sm:text-3xl lg:text-5xl">
             Scientific authority, openly indexed.
           </h2>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between lg:mt-12">
           <div className="inline-flex rounded-full border border-border bg-surface p-1">
             {tabs.map((t) => (
               <button
