@@ -1,4 +1,4 @@
-import { Phone, MapPin, Mail, Stethoscope, UserRound, ArrowRight, Instagram } from "lucide-react";
+import { Phone, MapPin, Mail, Stethoscope, UserRound, ArrowRight} from "lucide-react";
 import clinic from "@/assets/clinic-interior.jpg";
 
 export function Contact() {
@@ -73,12 +73,6 @@ export function Contact() {
                 <Phone size={16} className="mt-0.5 text-accent" />
                 <a href="tel:+919881954606" className="hover:text-foreground">
                   Call or WhatsApp: +91 98819 54606
-                </a>
-              </div>
-              <div className="flex items-start gap-3 text-muted-foreground">
-                <Instagram size={16} className="mt-0.5 text-accent" />
-                <a href="https://instagram.com/praveenmaxfacs" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
-                  @praveenmaxfacs
                 </a>
               </div>
             </dl>

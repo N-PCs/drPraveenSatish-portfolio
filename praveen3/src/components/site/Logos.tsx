@@ -25,3 +25,11 @@ export function RGUHSLogo({ className }: { className?: string }) {
 export function UIBKLogo({ className }: { className?: string }) {
   return <img src="/uniaustria.png" alt="University of Innsbruck" className={className ?? "h-9 w-9 shrink-0 object-contain"} />;
 }
+
+export function GMCLogo({ className }: { className?: string }) {
+  return <img src="/gmc.png" alt="Goa Medical College" className={className ?? "h-9 w-9 shrink-0 object-contain"} />;
+}
+
+export function GDCLogo({ className }: { className?: string }) {
+  return <img src="/gdc.png" alt="Goa Dental College" className={className ?? "h-9 w-9 shrink-0 object-contain"} />;
+}
