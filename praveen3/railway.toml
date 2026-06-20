@@ -3,4 +3,4 @@
   buildCommand = "npm run build"
 
 [deploy]
-  startCommand = "npx serve dist -l ${PORT} --single"
+  startCommand = "serve dist -l $PORT --single"
