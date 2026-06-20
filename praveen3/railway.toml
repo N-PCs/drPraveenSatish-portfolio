@@ -4,4 +4,4 @@
   outputDirectory = "dist"
 
 [deploy]
-  startCommand = "npx serve dist -l $PORT --single"
+  startCommand = "npx serve dist -l 3002 --single"
