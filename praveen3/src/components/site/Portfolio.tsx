@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { AlertTriangle, Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 import caseOncology from "@/assets/case-oncology.jpg";
 import caseTrauma from "@/assets/case-trauma.jpg";
 import caseTmj from "@/assets/case-tmj.jpg";
@@ -12,7 +12,6 @@ interface CaseItem {
   title: string;
   summary: string;
   image: string;
-  sensitive: boolean;
 }
 
 const cases: CaseItem[] = [
@@ -23,7 +22,6 @@ const cases: CaseItem[] = [
     summary:
       "Composite resection of T2 SCC tongue with primary closure using the K-technique, preserving articulation and deglutition.",
     image: caseOncology,
-    sensitive: true,
   },
   {
     id: "c2",
@@ -32,7 +30,6 @@ const cases: CaseItem[] = [
     summary:
       "Three-dimensional reconstruction of pan-facial fractures via titanium mesh and rigid internal fixation.",
     image: caseTrauma,
-    sensitive: false,
   },
   {
     id: "c3",
@@ -41,7 +38,6 @@ const cases: CaseItem[] = [
     summary:
       "Minimally invasive arthroscopy for internal derangement of the TMJ with restored translation.",
     image: caseTmj,
-    sensitive: false,
   },
   {
     id: "c4",
@@ -50,7 +46,6 @@ const cases: CaseItem[] = [
     summary:
       "Superficial parotidectomy for pleomorphic adenoma with complete preservation of the facial nerve.",
     image: caseOncology,
-    sensitive: true,
   },
   {
     id: "c5",
@@ -59,7 +54,6 @@ const cases: CaseItem[] = [
     summary:
       "Transconjunctival approach with patient-specific implant for orbital blowout fracture.",
     image: caseTrauma,
-    sensitive: false,
   },
   {
     id: "c6",
@@ -68,14 +62,13 @@ const cases: CaseItem[] = [
     summary:
       "Segmental resection with reconstruction plate and locoregional flap coverage.",
     image: caseTmj,
-    sensitive: true,
   },
 ];
 
 const filters: Exclude<Category, "All">[] = ["Oral Cancer", "Facial Trauma", "TMJ & Pathology"];
 
 function CaseCard({ item }: { item: CaseItem }) {
-  const [revealed, setRevealed] = useState(!item.sensitive);
+  const [revealed, setRevealed] = useState(false);
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-card transition-all hover:shadow-elevated">
@@ -93,24 +86,21 @@ function CaseCard({ item }: { item: CaseItem }) {
             onClick={() => setRevealed(true)}
             className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-foreground/60 p-6 text-center text-background backdrop-blur-sm transition-colors hover:bg-foreground/70"
           >
-            <AlertTriangle size={22} className="text-accent" />
+            <Eye size={22} className="text-accent" />
             <p className="text-xs uppercase tracking-[0.2em] text-background/80">
-              Medical Content Warning
-            </p>
-            <p className="max-w-[26ch] text-sm">
-              Contains intra-operative imagery intended for clinicians.
+              Click to view image
             </p>
             <span className="mt-2 inline-flex items-center gap-2 rounded-full border border-background/40 px-4 py-2 text-xs font-medium">
-              <Eye size={14} /> Click to unblur
+              <Eye size={14} /> Unblur
             </span>
           </button>
         )}
-        {revealed && item.sensitive && (
+        {revealed && (
           <button
             onClick={() => setRevealed(false)}
             className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-foreground/80 px-3 py-1.5 text-xs text-background backdrop-blur transition-colors hover:bg-foreground"
           >
-            <EyeOff size={12} /> Hide
+            <EyeOff size={12} /> Blur
           </button>
         )}
       </div>

@@ -52,14 +52,14 @@ export function Metrics() {
         {metrics.map((m, i) => (
           <div
             key={m.label}
-            className={`px-5 py-8 lg:px-10 lg:py-14 ${
+            className={`group cursor-default px-5 py-8 transition-colors hover:bg-accent lg:px-10 lg:py-14 ${
               i >= 2 ? "border-t border-border lg:border-t-0" : ""
             }`}
           >
-            <p className="text-3xl font-semibold tracking-tight text-foreground lg:text-5xl">
+            <p className="text-3xl font-semibold tracking-tight text-foreground transition-colors group-hover:text-accent-foreground lg:text-5xl">
               <Counter to={m.value} suffix={m.suffix} />
             </p>
-            <p className="mt-3 text-sm text-muted-foreground">{m.label}</p>
+            <p className="mt-3 text-sm text-muted-foreground transition-colors group-hover:text-accent-foreground">{m.label}</p>
           </div>
         ))}
       </div>
