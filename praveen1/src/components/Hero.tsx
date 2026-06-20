@@ -15,8 +15,8 @@ export default function Hero({ onNavigate }: HeroProps) {
         <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] bg-sky-200/30 rounded-full filter blur-[100px]"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-10 pb-12 lg:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-center">
           
           {/* Right Column - Illustration / Medical Diagram & Headshot Graphic */}
           <div className="lg:col-span-5 relative mt-0 order-1 lg:order-2">
@@ -24,47 +24,16 @@ export default function Hero({ onNavigate }: HeroProps) {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className="relative mx-auto max-w-[380px] sm:max-w-[420px] lg:max-w-none"
+              className="relative mx-auto max-w-[260px] sm:max-w-[320px] lg:max-w-[360px]"
             >
               {/* Main surgical avatar / abstract aesthetic visual container */}
-              <div id="surgical-graphic-wrapper" className="relative rounded-2xl bg-white border border-gray-200 shadow-xl p-6 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-teal/10 rounded-full filter blur-xl"></div>
-                
-                {/* Simulated radiographic surgical-alignment frame */}
-                <div className="relative aspect-square rounded-xl bg-brand-slate-light flex flex-col items-center justify-center border border-gray-200/80 overflow-hidden group">
-                  {/* Outer anatomy crosshairs overlay */}
-                  <div className="absolute inset-0 border border-brand-teal/10 pointer-events-none"></div>
-                  <div className="absolute top-1/2 left-4 right-4 h-[1px] bg-brand-teal/10"></div>
-                  <div className="absolute left-1/2 top-4 bottom-4 w-[1px] bg-brand-teal/10"></div>
-                  
-                  {/* Aesthetic visual rendering: high quality Unsplash clinical portraits or high-fidelity clinical model */}
-                  <img 
-                    src="/dr-profile.jpeg"
-                    alt="Dr. Praveen Satish surgical portrait backdrop representation" 
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover object-top opacity-95 transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                </div>
-
-                {/* Patient reassuring card */}
-                <div className="mt-5 space-y-3">
-                  <div className="flex items-start gap-3">
-                    <div className="p-1 px-2 rounded-lg bg-brand-teal/10 border border-brand-teal/20 text-xs text-brand-teal font-mono font-bold">
-                      19+ Yrs Experience
-                    </div>
-                                {/* Status Pill */}
-            <motion.div 
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="p-1 px-2 rounded-lg bg-brand-teal/10 border border-brand-teal/20 text-xs text-brand-teal font-mono font-bold">
-              <span className="text-brand-teal text-xs font-semibold tracking-wide uppercase font-mono">
-                DUAL BOARD-CERTIFIED 
-              </span>
-            </motion.div>
-                  </div>
-                </div>
-
+              <div id="surgical-graphic-wrapper" className="relative rounded-2xl bg-white border border-gray-200 shadow-xl overflow-hidden aspect-[4/5] group">
+                <img 
+                  src="/dr-profile.jpeg"
+                  alt="Dr. Praveen Satish surgical portrait backdrop representation" 
+                  referrerPolicy="no-referrer"
+                  className="absolute inset-0 h-full w-full object-cover object-top opacity-95 transition-transform duration-500 group-hover:scale-[1.05]"
+                />
               </div>
 
             </motion.div>
@@ -88,7 +57,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl font-medium"
+              className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl font-medium"
             >
               Dual Board certified Senior Maxillofacial Surgeon with 20+ years of clinical and academic leadership and 1,000+ operative cases in oral oncology, complex reconstruction, and facial trauma.
             </motion.p>
@@ -98,7 +67,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-8 flex flex-col sm:flex-row gap-4 max-w-md sm:max-w-none"
+              className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md sm:max-w-none"
             >
               <button
                 onClick={() => onNavigate('contact')}
@@ -123,7 +92,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-12 pt-8 border-t border-gray-200"
+              className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200"
             >
               <span className="text-gray-500 text-xs font-mono uppercase tracking-widest block mb-4 font-bold">
                 Affiliations & Board Certifications
