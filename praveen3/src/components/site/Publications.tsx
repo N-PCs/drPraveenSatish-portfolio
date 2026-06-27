@@ -172,7 +172,7 @@ export function Publications() {
                 <p className="text-2xl font-semibold tracking-tight text-foreground">
                   {e.year}
                 </p>
-              </div>
+              </div><span></span>
               <div className="col-span-9 sm:col-span-10">
                 <h3 className="text-base font-medium text-foreground sm:text-lg">
                   {e.title}
@@ -182,16 +182,17 @@ export function Publications() {
                   <span className="mx-2 text-border-strong">·</span>
                   {e.meta}
                 </p>
-              </div>
-              <div className="col-span-1 flex justify-end">
+                              <div className="col-span-1 flex justify-end">
                 <a
                   href="#"
                   aria-label="View paper"
                   className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-all hover:border-accent hover:text-accent group-hover:bg-surface"
                 >
-                  <ExternalLink size={14} />
+                  <ExternalLink size={14} color="#040cffa0"/>
                 </a>
               </div>
+              </div>
+
             </li>
           ))}
           {list.length === 0 && (

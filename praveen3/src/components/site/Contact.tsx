@@ -67,7 +67,7 @@ export function Contact() {
             <dl className="mt-6 space-y-3 text-sm">
               <div className="flex items-start gap-3 text-muted-foreground">
                 <MapPin size={16} className="mt-0.5 text-accent" />
-                <span>Bambolim, Goa — India</span>
+                <span><a href="https://www.google.com/maps/place/Goa+Dental+College+and+Hospital/@15.4652614,73.8570885,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfbf4c4ef3f9eb:0x5bc4c62df09d48af!8m2!3d15.4652614!4d73.8570885!16s%2Fm%2F06w9gkb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" >Bambolim, Goa, India</a></span>
               </div>
               <div className="flex items-start gap-3 text-muted-foreground">
                 <Phone size={16} className="mt-0.5 text-accent" />

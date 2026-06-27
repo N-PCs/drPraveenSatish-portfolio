@@ -61,7 +61,7 @@
   --secondary: oklch(0.96 0.006 240);
   --secondary-foreground: oklch(0.20 0.02 250);
 
-  --accent: oklch(45.647% 0.31021 264.39 / 0.627);           /* surgical teal #2C7A7B */
+  --accent: #040cffa0;           /* surgical teal #2C7A7B */
   --accent-foreground: oklch(0.99 0 0);
   --accent-soft: oklch(0.94 0.025 196);
 
