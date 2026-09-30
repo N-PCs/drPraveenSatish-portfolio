@@ -31,7 +31,7 @@ function Counter({ to, suffix }: { to: number; suffix: string }) {
           }
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
     obs.observe(ref.current);
     return () => obs.disconnect();
@@ -59,7 +59,9 @@ export function Metrics() {
             <p className="text-3xl font-semibold tracking-tight text-foreground transition-colors group-hover:text-accent-foreground lg:text-5xl">
               <Counter to={m.value} suffix={m.suffix} />
             </p>
-            <p className="mt-3 text-sm text-muted-foreground transition-colors group-hover:text-accent-foreground">{m.label}</p>
+            <p className="mt-3 text-sm text-muted-foreground transition-colors group-hover:text-accent-foreground">
+              {m.label}
+            </p>
           </div>
         ))}
       </div>

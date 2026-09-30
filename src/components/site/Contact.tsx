@@ -1,4 +1,4 @@
-import { Phone, MapPin, Mail, Stethoscope, UserRound, ArrowRight} from "lucide-react";
+import { Phone, MapPin, Mail, Stethoscope, UserRound, ArrowRight } from "lucide-react";
 import clinic from "@/assets/clinic-interior.jpg";
 
 export function Contact() {
@@ -21,9 +21,7 @@ export function Contact() {
               </div>
               <p className="eyebrow">For Patients</p>
             </div>
-            <h3 className="mt-6 text-2xl font-semibold text-foreground">
-              Request an appointment
-            </h3>
+            <h3 className="mt-6 text-2xl font-semibold text-foreground">Request an appointment</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               Share a few details and our team will reach out to schedule your consultation.
             </p>
@@ -67,7 +65,14 @@ export function Contact() {
             <dl className="mt-6 space-y-3 text-sm">
               <div className="flex items-start gap-3 text-muted-foreground">
                 <MapPin size={16} className="mt-0.5 text-accent" />
-                <span><a href="https://www.google.com/maps/place/Goa+Dental+College+and+Hospital/@15.4652614,73.8570885,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfbf4c4ef3f9eb:0x5bc4c62df09d48af!8m2!3d15.4652614!4d73.8570885!16s%2Fm%2F06w9gkb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" >Bambolim, Goa, India</a></span>
+                <span>
+                  <a
+                    href="https://www.google.com/maps/place/Goa+Dental+College+and+Hospital/@15.4652614,73.8570885,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfbf4c4ef3f9eb:0x5bc4c62df09d48af!8m2!3d15.4652614!4d73.8570885!16s%2Fm%2F06w9gkb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                  >
+                    Bambolim, Goa, India
+                  </a>
+                </span>
               </div>
               <div className="flex items-start gap-3 text-muted-foreground">
                 <Phone size={16} className="mt-0.5 text-accent" />

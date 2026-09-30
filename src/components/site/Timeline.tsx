@@ -1,5 +1,13 @@
 import type { ComponentType } from "react";
-import { IBCSOMSLogo, AOMSILogo, IDALogo, AOCMFLogo, FDSRCPsLogo, UIBKLogo, RGUHSLogo } from "./Logos";
+import {
+  IBCSOMSLogo,
+  AOMSILogo,
+  IDALogo,
+  AOCMFLogo,
+  FDSRCPsLogo,
+  UIBKLogo,
+  RGUHSLogo,
+} from "./Logos";
 
 const leadership = [
   {
@@ -60,7 +68,12 @@ function Column({
   items,
 }: {
   label: string;
-  items: { year: string; title: string; org: string; logo: ComponentType<{ className?: string }> }[];
+  items: {
+    year: string;
+    title: string;
+    org: string;
+    logo: ComponentType<{ className?: string }>;
+  }[];
 }) {
   return (
     <div>
@@ -80,7 +93,9 @@ function Column({
                   <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
                     {it.year}
                   </p>
-                  <h3 className="mt-1.5 text-base font-semibold text-foreground lg:mt-2 lg:text-lg">{it.title}</h3>
+                  <h3 className="mt-1.5 text-base font-semibold text-foreground lg:mt-2 lg:text-lg">
+                    {it.title}
+                  </h3>
                   <p className="mt-1 text-sm text-muted-foreground">{it.org}</p>
                 </div>
               </div>

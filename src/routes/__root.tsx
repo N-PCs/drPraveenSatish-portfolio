@@ -1,11 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {
-  Outlet,
-  Link,
-  createRootRouteWithContext,
-  useRouter,
-} from "@tanstack/react-router";
+import { Outlet, Link, createRootRouteWithContext, useRouter } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { ReactLenis } from "lenis/react";
 
 function NotFoundComponent() {
   return (
@@ -75,7 +71,19 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <ReactLenis
+        root
+        options={{
+          lerp: 0.1,
+          duration: 1.2,
+          smoothWheel: true,
+          wheelMultiplier: 1.0,
+          touchMultiplier: 1.2,
+          anchors: { offset: -64 },
+        }}
+      >
+        <Outlet />
+      </ReactLenis>
     </QueryClientProvider>
   );
 }

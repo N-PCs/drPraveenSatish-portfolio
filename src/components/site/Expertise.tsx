@@ -1,11 +1,4 @@
-import {
-  Microscope,
-  Scissors,
-  ShieldPlus,
-  Activity,
-  Bone,
-  Sparkles,
-} from "lucide-react";
+import { Microscope, Scissors, ShieldPlus, Activity, Bone, Sparkles } from "lucide-react";
 
 const items = [
   {

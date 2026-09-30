@@ -15,7 +15,8 @@ const entries: Entry[] = [
   {
     tab: "Peer-Reviewed Journals",
     year: "2021",
-    title: "Functional reconstruction of lateral oral tongue defects using K’s technique: Technical Note.",
+    title:
+      "Functional reconstruction of lateral oral tongue defects using K’s technique: Technical Note.",
     venue: "Advances in Oral and Maxillofacial Surgery",
     meta: "Kumar Praveen et al.",
   },
@@ -29,7 +30,8 @@ const entries: Entry[] = [
   {
     tab: "Peer-Reviewed Journals",
     year: "2020",
-    title: "A Randomized Control Trial to Assess Intraoperative and Postoperative Outcomes of Colorado Microdissection Needle Versus Conventional Surgical Knife in Neck Dissection.",
+    title:
+      "A Randomized Control Trial to Assess Intraoperative and Postoperative Outcomes of Colorado Microdissection Needle Versus Conventional Surgical Knife in Neck Dissection.",
     venue: "Journal of Maxillofacial and Oral Surgery",
     meta: "Kumar Praveen et al.",
   },
@@ -43,21 +45,24 @@ const entries: Entry[] = [
   {
     tab: "Peer-Reviewed Journals",
     year: "2018",
-    title: "Fractures of Maxillary Tuberosity during Extraction of Maxilloary Molar - A Case Report and Review.",
+    title:
+      "Fractures of Maxillary Tuberosity during Extraction of Maxilloary Molar - A Case Report and Review.",
     venue: "Medico Research Chronicles",
     meta: "Naik Mohan et al.",
   },
   {
     tab: "Peer-Reviewed Journals",
     year: "2018",
-    title: "Extra nodal natural killer lymphoma mimicking canine Fossa infection–a clinical report.",
+    title:
+      "Extra nodal natural killer lymphoma mimicking canine Fossa infection–a clinical report.",
     venue: "International Clinical Pathology Journal",
     meta: "Kumar Praveen et al.",
   },
   {
     tab: "Peer-Reviewed Journals",
     year: "2017",
-    title: "Tracheal Tube Blockage by Fractured Middle Turbinate During Nasal Intubation: A Rare Airway Cmplication.",
+    title:
+      "Tracheal Tube Blockage by Fractured Middle Turbinate During Nasal Intubation: A Rare Airway Cmplication.",
     venue: "Journal of Maxillofacial and Oral Surgery",
     meta: "Kumar Praveen et al.",
   },
@@ -71,21 +76,24 @@ const entries: Entry[] = [
   {
     tab: "Peer-Reviewed Journals",
     year: "2014",
-    title: "Eruption Status Of Third Molar And Its Possible Influence On The Location Of Mandibular Angle Fracture",
+    title:
+      "Eruption Status Of Third Molar And Its Possible Influence On The Location Of Mandibular Angle Fracture",
     venue: "J.Maxillofac.Oral Surg.",
     meta: "Praveen Satish Kumar et al.",
   },
   {
     tab: "Invited International Lectures",
     year: "2025",
-    title: "Feasibility and functional outcome of Transpositional flap for reconstruction of medium sized ablative tongue defects",
+    title:
+      "Feasibility and functional outcome of Transpositional flap for reconstruction of medium sized ablative tongue defects",
     venue: "ICOMS",
     meta: "Singapore",
   },
   {
     tab: "Invited International Lectures",
     year: "2025",
-    title: "Correlation between depth of invasion and nodal metastasis in OSCC- Effect on DFS And OS",
+    title:
+      "Correlation between depth of invasion and nodal metastasis in OSCC- Effect on DFS And OS",
     venue: "AFCOMS",
     meta: "Adis Ababa, Ethiopia",
   },
@@ -115,9 +123,7 @@ export function Publications() {
     return entries
       .filter((e) => e.tab === tab)
       .filter((e) =>
-        q.trim()
-          ? (e.title + e.venue + e.year).toLowerCase().includes(q.toLowerCase())
-          : true
+        q.trim() ? (e.title + e.venue + e.year).toLowerCase().includes(q.toLowerCase()) : true,
       );
   }, [tab, q]);
 
@@ -169,30 +175,26 @@ export function Publications() {
               className="group grid grid-cols-12 items-start gap-4 p-6 transition-colors hover:bg-surface-2 sm:p-7"
             >
               <div className="col-span-2 sm:col-span-1">
-                <p className="text-2xl font-semibold tracking-tight text-foreground">
-                  {e.year}
-                </p>
-              </div><span></span>
+                <p className="text-2xl font-semibold tracking-tight text-foreground">{e.year}</p>
+              </div>
+              <span></span>
               <div className="col-span-9 sm:col-span-10">
-                <h3 className="text-base font-medium text-foreground sm:text-lg">
-                  {e.title}
-                </h3>
+                <h3 className="text-base font-medium text-foreground sm:text-lg">{e.title}</h3>
                 <p className="mt-1.5 text-sm text-muted-foreground">
                   <span className="text-foreground/80">{e.venue}</span>
                   <span className="mx-2 text-border-strong">·</span>
                   {e.meta}
                 </p>
-                              <div className="col-span-1 flex justify-end">
-                <a
-                  href="#"
-                  aria-label="View paper"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-all hover:border-accent hover:text-accent group-hover:bg-surface"
-                >
-                  <ExternalLink size={14} color="#040cffa0"/>
-                </a>
+                <div className="col-span-1 flex justify-end">
+                  <a
+                    href="#"
+                    aria-label="View paper"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-all hover:border-accent hover:text-accent group-hover:bg-surface"
+                  >
+                    <ExternalLink size={14} color="#040cffa0" />
+                  </a>
+                </div>
               </div>
-              </div>
-
             </li>
           ))}
           {list.length === 0 && (

@@ -59,8 +59,7 @@ const cases: CaseItem[] = [
     id: "c6",
     category: "Oral Cancer",
     title: "Segmental Mandibulectomy & Plate Reconstruction",
-    summary:
-      "Segmental resection with reconstruction plate and locoregional flap coverage.",
+    summary: "Segmental resection with reconstruction plate and locoregional flap coverage.",
     image: caseTmj,
   },
 ];
@@ -115,10 +114,7 @@ function CaseCard({ item }: { item: CaseItem }) {
 
 export function Portfolio() {
   const [active, setActive] = useState<Exclude<Category, "All">>("Oral Cancer");
-  const filtered = useMemo(
-    () => cases.filter((c) => c.category === active),
-    [active]
-  );
+  const filtered = useMemo(() => cases.filter((c) => c.category === active), [active]);
 
   return (
     <section id="portfolio" className="bg-surface-2 py-16 lg:py-32">

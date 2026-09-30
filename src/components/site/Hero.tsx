@@ -40,16 +40,18 @@ export function Hero() {
 
         <div className="lg:col-span-7 lg:order-1 animate-rise">
           <h1 className="text-2xl font-semibold leading-[1.1] text-foreground sm:text-3xl lg:text-[64px]">
-            Restoring{" "}
-            <span className="text-accent">function, form </span><span>and</span> <span className="text-accent">quality of life</span>{" "}
-             through specialized maxillofacial care.
+            Restoring <span className="text-accent">function, form </span>
+            <span>and</span> <span className="text-accent">quality of life</span> through
+            specialized maxillofacial care.
           </h1>
           <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-md lg:mt-8">
             Dual board certified senior maxillofacial surgeon with{" "}
-            <span className="font-medium text-foreground">19+ years</span> of
-            clinical and academic leadership and over{" "}
-            <span className="font-medium text-foreground">1,000 operative cases</span>{" "}
-            in oral oncology, complex reconstruction, and facial trauma. Internationally active leader— Senate member and Examination Director for the International Board (IBCSOMS) and AOCMF faculty.
+            <span className="font-medium text-foreground">19+ years</span> of clinical and academic
+            leadership and over{" "}
+            <span className="font-medium text-foreground">1,000 operative cases</span> in oral
+            oncology, complex reconstruction, and facial trauma. Internationally active leader—
+            Senate member and Examination Director for the International Board (IBCSOMS) and AOCMF
+            faculty.
           </p>
 
           <div className="mt-7 flex flex-wrap items-center gap-3 lg:mt-10 lg:gap-4">
@@ -58,7 +60,7 @@ export function Hero() {
               className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all hover:bg-accent lg:px-7 lg:py-3.5"
             >
               Schedule a consultation
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1"/>
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#portfolio"
