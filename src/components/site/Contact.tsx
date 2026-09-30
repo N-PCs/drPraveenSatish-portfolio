@@ -13,75 +13,6 @@ export function Contact() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-5 lg:mt-16 lg:grid-cols-2 lg:gap-6">
-          {/* Card A — Patients */}
-          <div className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-8 shadow-card transition-all hover:shadow-elevated lg:p-10">
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-accent-soft text-accent">
-                <UserRound size={20} strokeWidth={1.6} />
-              </div>
-              <p className="eyebrow">For Patients</p>
-            </div>
-            <h3 className="mt-6 text-2xl font-semibold text-foreground">Request an appointment</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Share a few details and our team will reach out to schedule your consultation.
-            </p>
-
-            <form
-              className="mt-8 space-y-4"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <input
-                  type="text"
-                  required
-                  placeholder="Full name"
-                  className="w-full rounded-lg border border-border bg-surface-2 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
-                />
-                <input
-                  type="tel"
-                  required
-                  placeholder="Phone number"
-                  className="w-full rounded-lg border border-border bg-surface-2 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
-                />
-              </div>
-              <textarea
-                rows={3}
-                placeholder="Briefly describe your concern"
-                className="w-full rounded-lg border border-border bg-surface-2 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
-              />
-              <button
-                type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-accent sm:w-auto"
-              >
-                Request appointment
-                <ArrowRight size={14} />
-              </button>
-            </form>
-
-            <div className="mt-8 hairline" />
-
-            <dl className="mt-6 space-y-3 text-sm">
-              <div className="flex items-start gap-3 text-muted-foreground">
-                <MapPin size={16} className="mt-0.5 text-accent" />
-                <span>
-                  <a
-                    href="https://www.google.com/maps/place/Goa+Dental+College+and+Hospital/@15.4652614,73.8570885,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfbf4c4ef3f9eb:0x5bc4c62df09d48af!8m2!3d15.4652614!4d73.8570885!16s%2Fm%2F06w9gkb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                  >
-                    Bambolim, Goa, India
-                  </a>
-                </span>
-              </div>
-              <div className="flex items-start gap-3 text-muted-foreground">
-                <Phone size={16} className="mt-0.5 text-accent" />
-                <a href="tel:+919881954606" className="hover:text-foreground">
-                  Call or WhatsApp: +91 98819 54606
-                </a>
-              </div>
-            </dl>
-          </div>
 
           {/* Card B — Professionals */}
           <div className="group relative overflow-hidden rounded-2xl border border-border bg-foreground p-8 text-background shadow-card transition-all hover:shadow-elevated lg:p-10">
@@ -102,7 +33,7 @@ export function Contact() {
                   <Stethoscope size={20} strokeWidth={1.6} />
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-                  For Medical Professionals
+                  For Patients
                 </p>
               </div>
               <h3 className="mt-6 text-2xl font-semibold">Refer a patient securely</h3>
@@ -148,6 +79,17 @@ export function Contact() {
                     className="text-background/60 transition-transform group-hover/btn:translate-x-1"
                   />
                 </a>
+              </div><p></p><div></div>
+                <div className="flex items-start gap-3 text-muted-foreground">
+                <MapPin size={16} className="mt-0.5 text-accent" />
+                <span>
+                  <a
+                    href="https://www.google.com/maps/place/Goa+Dental+College+and+Hospital/@15.4652614,73.8570885,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfbf4c4ef3f9eb:0x5bc4c62df09d48af!8m2!3d15.4652614!4d73.8570885!16s%2Fm%2F06w9gkb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                  >
+                    Bambolim, Goa, India
+                  </a>
+                </span>
               </div>
             </div>
           </div>
