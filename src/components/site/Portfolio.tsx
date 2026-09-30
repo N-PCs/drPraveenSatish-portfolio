@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
   Eye,
   EyeOff,
@@ -11,7 +11,15 @@ import {
   ChevronLeft,
   CheckCircle2,
   Info,
+  SlidersHorizontal,
+  LayoutGrid,
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import {
   skinCancerPreop,
   skinCancerIntraop,
@@ -452,7 +460,7 @@ function CaseCard({
   const currentImage = item.images[activeImageIndex] ?? item.images[0];
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-card transition-all duration-300 hover:shadow-elevated">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-card transition-all duration-300 hover:shadow-elevated">
       {/* Media Window */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-950">
         {/* The Surgical Image (blurred until unlocked) */}
@@ -600,10 +608,42 @@ export function Portfolio() {
     index: number;
   } | null>(null);
 
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(1);
+  const [totalSlides, setTotalSlides] = useState(1);
+  const [viewMode, setViewMode] = useState<"carousel" | "grid">("carousel");
+
   const filteredCases = useMemo(() => {
     if (activeCategory === "All") return cases;
     return cases.filter((c) => c.category === activeCategory);
   }, [activeCategory]);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+    const updateScrollState = () => {
+      setCanScrollPrev(carouselApi.canScrollPrev());
+      setCanScrollNext(carouselApi.canScrollNext());
+      setCurrentSlide(carouselApi.selectedScrollSnap() + 1);
+      setTotalSlides(carouselApi.scrollSnapList().length);
+    };
+
+    updateScrollState();
+    carouselApi.on("select", updateScrollState);
+    carouselApi.on("reInit", updateScrollState);
+
+    return () => {
+      carouselApi.off("select", updateScrollState);
+      carouselApi.off("reInit", updateScrollState);
+    };
+  }, [carouselApi]);
+
+  useEffect(() => {
+    if (carouselApi) {
+      carouselApi.scrollTo(0, true);
+    }
+  }, [activeCategory, carouselApi]);
 
   return (
     <section id="portfolio" className="bg-surface-2 py-16 lg:py-28">
@@ -689,17 +729,122 @@ export function Portfolio() {
           ))}
         </div>
 
-        {/* Cases Grid */}
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredCases.map((c) => (
-            <CaseCard
-              key={c.id}
-              item={c}
-              globalUnlocked={globalUnlocked}
-              onOpenLightbox={(item, idx) => setLightboxCase({ item, index: idx })}
-            />
-          ))}
+        {/* Carousel & View Controls */}
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
+            <span>
+              Showing {filteredCases.length}{" "}
+              {filteredCases.length === 1 ? "case" : "surgical cases"}
+            </span>
+            {viewMode === "carousel" && totalSlides > 1 && (
+              <>
+                <span className="text-border">•</span>
+                <span className="font-semibold text-foreground">
+                  Card {currentSlide} of {totalSlides}
+                </span>
+              </>
+            )}
+          </div>
+
+          <div className="flex items-center gap-3">
+            {/* View Mode Switcher (Carousel vs Grid) */}
+            <div className="flex items-center rounded-full border border-border bg-surface p-1 shadow-sm">
+              <button
+                type="button"
+                title="Side-by-side Carousel View"
+                onClick={() => setViewMode("carousel")}
+                className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold transition-all ${
+                  viewMode === "carousel"
+                    ? "bg-accent text-accent-foreground shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <SlidersHorizontal size={13} />
+                <span>Side by Side</span>
+              </button>
+              <button
+                type="button"
+                title="Grid View"
+                onClick={() => setViewMode("grid")}
+                className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold transition-all ${
+                  viewMode === "grid"
+                    ? "bg-accent text-accent-foreground shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <LayoutGrid size={13} />
+                <span>Grid</span>
+              </button>
+            </div>
+
+            {/* Carousel Navigation Buttons */}
+            {viewMode === "carousel" && (
+              <div className="flex items-center gap-1.5">
+                <button
+                  type="button"
+                  aria-label="Previous case"
+                  onClick={() => carouselApi?.scrollPrev()}
+                  disabled={!canScrollPrev}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface text-foreground shadow-sm transition-all hover:border-accent hover:text-accent disabled:pointer-events-none disabled:opacity-30"
+                >
+                  <ChevronLeft size={16} />
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next case"
+                  onClick={() => carouselApi?.scrollNext()}
+                  disabled={!canScrollNext}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface text-foreground shadow-sm transition-all hover:border-accent hover:text-accent disabled:pointer-events-none disabled:opacity-30"
+                >
+                  <ChevronRight size={16} />
+                </button>
+              </div>
+            )}
+          </div>
         </div>
+
+        {/* Side-by-Side Carousel or Grid View */}
+        {viewMode === "carousel" ? (
+          <div className="mt-4 -mx-5 px-5 sm:mx-0 sm:px-0">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: false,
+                dragFree: true,
+              }}
+              setApi={setCarouselApi}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-6">
+                {filteredCases.map((c) => (
+                  <CarouselItem
+                    key={c.id}
+                    className="pl-6 basis-[88%] sm:basis-[70%] md:basis-[48%] lg:basis-[33.333%]"
+                  >
+                    <div className="h-full py-2">
+                      <CaseCard
+                        item={c}
+                        globalUnlocked={globalUnlocked}
+                        onOpenLightbox={(item, idx) => setLightboxCase({ item, index: idx })}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+        ) : (
+          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {filteredCases.map((c) => (
+              <CaseCard
+                key={c.id}
+                item={c}
+                globalUnlocked={globalUnlocked}
+                onOpenLightbox={(item, idx) => setLightboxCase({ item, index: idx })}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Lightbox Modal */}
