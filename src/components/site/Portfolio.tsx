@@ -174,21 +174,22 @@ const cases: CaseItem[] = [
   {
     id: "case-oral-tumor",
     category: "Oral Cancer",
-    title: "Advanced Maxillo-Alveolar & Palatal Tumor Ablation",
-    procedure: "Composite alveolar and palatal resection with surgical reconstruction planning",
+    title: "Mandibular Alveolus Tumour Ablation",
+    procedure:
+      "Composite mandibular alveolar resection with surgical reconstruction planning",
     summary:
-      "Ablative surgical management of an extensive intraoral neoplasm arising from the right maxillary alveolar ridge and hard palate. Meticulous three-dimensional resection achieving clear margins while safeguarding adjacent vital masticatory structures.",
+      "Ablative surgical management of an extensive intraoral neoplasm arising from the mandibular alveolar ridge. Meticulous three-dimensional resection achieving clear oncologic margins while safeguarding adjacent vital neurovascular and masticatory structures.",
     clinicalHighlights: [
       "Complete resection with three-dimensional oncologic margins",
-      "Preservation of surrounding vital structures and maxillary tuberosity",
-      "Immediate temporary obturation transitioning to staged rehabilitation",
+      "Preservation of surrounding vital structures and mandibular continuity",
+      "Immediate ablative management with microvascular reconstructive planning",
     ],
     images: [
       {
         label: "Intraoral Presentation",
         src: oralTumorAlveolar,
         description:
-          "Intraoral clinical photograph showing prominent exophytic mass along the maxillary alveolus and posterior hard palate.",
+          "Intraoral clinical photograph showing prominent exophytic tumour along the mandibular alveolus.",
       },
     ],
   },

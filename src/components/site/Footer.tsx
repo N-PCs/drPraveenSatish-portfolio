@@ -19,17 +19,30 @@ export function Footer() {
           <p className="mt-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
             Maxillofacial &amp; Oral Onco Surgeon ·{" "}
             <a
-              href="https://www.google.com/maps/place/Goa+Dental+College+and+Hospital/@15.4652614,73.8570885,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfbf4c4ef3f9eb:0x5bc4c62df09d48af!8m2!3d15.4652614!4d73.8570885!16s%2Fm%2F06w9gkb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+              href="https://maps.app.goo.gl/q31XrD5zoB65SoQR9"
               target="_blank"
-              style={{ color: "#040cffa0" }}
+              rel="noopener noreferrer"
+              className="hover:underline transition-colors text-accent inline-flex items-center gap-0.5"
             >
-              Bambolim, Goa{" "}
-              <MapPin
-                width={"15px"}
-                height={"15px"}
-                strokeWidth={2}
-                className="inline-flex"
-              ></MapPin>
+              Old Goa
+            </a>
+            {" · "}
+            <a
+              href="https://maps.app.goo.gl/Cu2k5zeTHPEn9rXY9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline transition-colors text-accent inline-flex items-center gap-0.5"
+            >
+              Mapusa
+            </a>
+            {" · "}
+            <a
+              href="https://maps.app.goo.gl/4kTNZ4JSW1Y7joKS9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline transition-colors text-accent inline-flex items-center gap-0.5"
+            >
+              Panjim <MapPin size={13} className="inline-flex shrink-0 ml-0.5" />
             </a>
           </p>
         </div>

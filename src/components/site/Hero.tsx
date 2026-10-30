@@ -9,7 +9,7 @@ const badges = [
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-16 lg:pt-24">
+    <section id="home" className="relative overflow-hidden pt-24 sm:pt-28 lg:pt-36">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_20%_10%,color-mix(in_oklab,var(--color-accent)_10%,transparent),transparent_70%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,var(--color-background))]" />
