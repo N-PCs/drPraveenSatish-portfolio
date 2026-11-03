@@ -13,8 +13,11 @@ import {
   ZoomIn,
   ZoomOut,
   X,
+  AlertTriangle,
+  ShieldCheck,
 } from "lucide-react";
 import clinic from "@/assets/clinic-interior.jpg";
+import { openLegalModal } from "@/lib/legal";
 
 interface HospitalImage {
   src: string;
@@ -155,6 +158,33 @@ export function Contact() {
           </h2>
         </div>
 
+        {/* Emergency Notice Banner */}
+        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3.5 rounded-2xl border border-destructive/30 bg-destructive/5 p-4 text-xs text-foreground shadow-sm">
+          <div className="flex items-start gap-3">
+            <div className="rounded-xl bg-destructive/10 p-2 text-destructive shrink-0 mt-0.5">
+              <AlertTriangle size={18} />
+            </div>
+            <div>
+              <p className="font-semibold text-destructive">
+                Urgent Medical Notice: Not For Acute Emergencies
+              </p>
+              <p className="text-muted-foreground text-[11px] sm:text-xs leading-relaxed mt-0.5">
+                If you are experiencing acute facial trauma, airway compromise, severe hemorrhage,
+                or a life-threatening condition, do not use email or wait for an appointment.
+                Immediately call <strong>108 / 112</strong> (India) or proceed directly to the
+                nearest hospital emergency/casualty department.
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => openLegalModal("disclaimer")}
+            className="shrink-0 text-[11px] font-semibold text-destructive hover:underline cursor-pointer"
+          >
+            Emergency Protocols →
+          </button>
+        </div>
+
         <div className="mt-10 grid grid-cols-1 gap-5 lg:mt-16 lg:grid-cols-2 lg:gap-6">
           {/* Card A — Contact Details */}
           <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-foreground p-8 text-background shadow-card transition-all hover:shadow-elevated lg:p-10">
@@ -221,6 +251,36 @@ export function Contact() {
                     className="text-background/60 transition-transform group-hover/btn:translate-x-1"
                   />
                 </a>
+              </div>
+
+              {/* Consultation & Telemedicine Intake Disclaimer */}
+              <div className="mt-6 rounded-xl border border-background/15 bg-background/5 p-4 text-[11px] leading-relaxed text-background/70">
+                <p className="font-semibold text-background flex items-center gap-1.5 mb-1">
+                  <ShieldCheck size={13} className="text-accent" />
+                  Clinical Triage &amp; Intake Protocol
+                </p>
+                <p>
+                  Transmitting clinical notes or referral summaries facilitates hospital OPD triage
+                  but does not constitute a formal medical diagnosis or establish a binding
+                  doctor-patient relationship until an in-person clinical examination is conducted.
+                </p>
+                <div className="mt-2 flex items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => openLegalModal("privacy")}
+                    className="text-accent hover:underline text-[10px] font-semibold cursor-pointer"
+                  >
+                    DPDP Act Privacy Policy →
+                  </button>
+                  <span className="text-background/30">•</span>
+                  <button
+                    type="button"
+                    onClick={() => openLegalModal("disclaimer")}
+                    className="text-accent hover:underline text-[10px] font-semibold cursor-pointer"
+                  >
+                    Medical Disclaimer →
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -353,7 +413,9 @@ export function Contact() {
                           key={img.src}
                           onClick={() => setCurrentImageIndex(i)}
                           className={`h-2 rounded-full transition-all ${
-                            i === currentImageIndex ? "w-6 bg-accent" : "w-2 bg-white/50 hover:bg-white/80"
+                            i === currentImageIndex
+                              ? "w-6 bg-accent"
+                              : "w-2 bg-white/50 hover:bg-white/80"
                           }`}
                           aria-label={`Slide ${i + 1}`}
                         />

@@ -27,12 +27,15 @@ export function Hero() {
                 height={1152}
                 className="aspect-[4/5] w-full object-cover"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/85 via-foreground/30 to-transparent p-6">
-                <p className="text-xs uppercase tracking-[0.2em] text-background/70">
-                  Senior Consultant
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/95 via-foreground/60 to-transparent p-6">
+                <p className="text-lg font-semibold text-background">Dr. Praveen Satish,</p>
+                <p className="mt-1 text-xs leading-relaxed text-background/85">
+                  MDS, FDS RCPS (UK), Fellow AOCMF (Austria), FIBOMS, FIBCSOMS, Diploma in Oral
+                  Oncology
                 </p>
-                <p className="mt-1 text-lg font-medium text-background">Dr. Praveen Satish, MDS</p>
-                <p className="text-sm text-background/80">Maxillofacial &amp; Oral Onco Surgery</p>
+                <p className="mt-2 text-sm font-medium text-background/90">
+                  Maxillo Facial Surgeon
+                </p>
               </div>
             </div>
           </div>

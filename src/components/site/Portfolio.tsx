@@ -20,6 +20,7 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import { openLegalModal } from "@/lib/legal";
 import {
   skinCancerPreop,
   skinCancerIntraop,
@@ -52,11 +53,7 @@ import {
 } from "@/assets/cases";
 
 export type Category =
-  | "All"
-  | "Oral Cancer"
-  | "Facial Trauma"
-  | "TMJ & Arthroscopy"
-  | "Oral Pathology";
+  "All" | "Oral Cancer" | "Facial Trauma" | "TMJ & Arthroscopy" | "Oral Pathology";
 
 export interface CaseImage {
   label: string;
@@ -175,8 +172,7 @@ const cases: CaseItem[] = [
     id: "case-oral-tumor",
     category: "Oral Cancer",
     title: "Mandibular Alveolus Tumour Ablation",
-    procedure:
-      "Composite mandibular alveolar resection with surgical reconstruction planning",
+    procedure: "Composite mandibular alveolar resection with surgical reconstruction planning",
     summary:
       "Ablative surgical management of an extensive intraoral neoplasm arising from the mandibular alveolar ridge. Meticulous three-dimensional resection achieving clear oncologic margins while safeguarding adjacent vital neurovascular and masticatory structures.",
     clinicalHighlights: [
@@ -690,25 +686,39 @@ export function Portfolio() {
         </div>
 
         {/* Ethical Patient Confidentiality & Medical Advisory Banner */}
-        <div className="mt-8 flex flex-col gap-3 rounded-2xl border border-border bg-surface/80 p-4 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-start gap-3">
-            <div className="rounded-full bg-accent/10 p-2 text-accent">
-              <ShieldAlert size={18} />
+        <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-border bg-surface/90 p-4 sm:p-5 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between shadow-sm">
+          <div className="flex items-start gap-3.5 max-w-3xl">
+            <div className="rounded-xl bg-accent/10 p-2 text-accent shrink-0 mt-0.5">
+              <ShieldAlert size={20} />
             </div>
             <div>
-              <p className="text-xs font-semibold text-foreground">
-                Clinical Content Advisory &amp; Patient Privacy Standards
+              <p className="text-xs sm:text-sm font-semibold text-foreground flex items-center gap-2">
+                <span>Clinical Case Disclosures &amp; Ethical Patient Privacy</span>
+                <span className="rounded-full bg-accent-soft px-2 py-0.5 text-[10px] font-medium text-accent">
+                  Documented Consent
+                </span>
               </p>
-              <p className="text-[11px] leading-relaxed text-muted-foreground">
-                Sensitive patient features (including ocular regions and clinical records) have been
-                de-identified according to medical ethics guidelines. Images are protected by an
-                interactive blur barrier for viewer discretion.
+              <p className="mt-1 text-[11px] sm:text-xs leading-relaxed text-muted-foreground">
+                Case documentation, intra-operative views, and radiological studies are presented
+                solely for medical education and patient awareness under documented informed
+                consent. Results vary based on individual anatomical and pathological factors; no
+                specific surgical or aesthetic outcome is guaranteed. Sensitive features are
+                de-identified and shielded by blur barriers.
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2 text-[11px] font-medium text-accent">
-            <Info size={14} />
-            <span>Click any card to unlock individually</span>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 shrink-0">
+            <button
+              type="button"
+              onClick={() => openLegalModal("consent")}
+              className="text-[11px] font-medium text-accent hover:underline cursor-pointer"
+            >
+              Consent &amp; Photo Policy →
+            </button>
+            <div className="flex items-center gap-1.5 text-[11px] font-medium text-muted-foreground">
+              <Info size={13} className="text-accent" />
+              <span>Tap cards to reveal</span>
+            </div>
           </div>
         </div>
 
@@ -973,6 +983,26 @@ export function Portfolio() {
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                <div className="mt-5 border-t border-white/10 pt-4">
+                  <div className="rounded-lg bg-white/5 p-3 text-[11px] text-slate-400 space-y-1.5 border border-white/10">
+                    <p className="font-semibold text-slate-200 flex items-center gap-1.5">
+                      <ShieldAlert size={12} className="text-accent shrink-0" />
+                      Educational Case Record
+                    </p>
+                    <p className="leading-normal text-slate-400">
+                      Documented informed consent obtained. Results reflect individual anatomy;
+                      outcomes are not guaranteed.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => openLegalModal("disclaimer")}
+                      className="text-accent hover:underline text-[11px] font-medium pt-0.5 block cursor-pointer"
+                    >
+                      Medical Disclaimer &amp; Rights →
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

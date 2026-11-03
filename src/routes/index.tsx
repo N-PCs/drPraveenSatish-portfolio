@@ -8,6 +8,7 @@ import { Timeline } from "@/components/site/Timeline";
 import { Publications } from "@/components/site/Publications";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { LegalModalController } from "@/components/site/LegalModal";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -27,6 +28,7 @@ function Index() {
         <Contact />
       </main>
       <Footer />
+      <LegalModalController />
     </div>
   );
 }
