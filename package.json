@@ -6,13 +6,12 @@
   "scripts": {
     "dev": "vite --port 3002",
     "build": "vite build",
-    "preview": "npm run build && wrangler dev",
+    "preview": "vite preview",
     "start": "serve dist -l $PORT --single",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "deploy": "npm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=drpraveensatish"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
