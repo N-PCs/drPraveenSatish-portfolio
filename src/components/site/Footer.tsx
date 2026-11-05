@@ -41,8 +41,7 @@ export function Footer() {
               </a>
             </p>
             <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-              MDS, FDS RCPS (UK), Fellow AOCMF (Austria), FIBOMS, FIBCSOMS, Diploma in Oral
-              Oncology
+              MDS, FDS RCPS (UK), Fellow AOCMF (Austria), FIBOMS, FIBCSOMS, Diploma in Oral Oncology
             </p>
           </div>
 

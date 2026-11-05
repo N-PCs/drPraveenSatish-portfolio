@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#ffffff"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" stroke="#e5e7eb" stroke-width="1.5"/>
+  
+  <!-- Binaural Eartips -->
+  <circle cx="20" cy="14" r="3" fill="#059669"/>
+  <circle cx="44" cy="14" r="3" fill="#059669"/>
+  
+  <!-- Binaural Tubes -->
+  <path d="M20 16.5v7a12 12 0 0 0 24 0v-7" stroke="#059669" stroke-width="4.5" stroke-linecap="round"/>
+  
+  <!-- Main Tubing looping down -->
+  <path d="M32 35.5v7a8.5 8.5 0 0 0 17 0v-5" stroke="#059669" stroke-width="4.5" stroke-linecap="round"/>
+  
+  <!-- Chest Piece / Diaphragm -->
+  <circle cx="49" cy="37.5" r="5.5" fill="#10b981" stroke="#059669" stroke-width="3"/>
+  
+  <!-- Doctor Cross Badge in Center -->
+  <rect x="29" y="19" width="6" height="14" rx="1.5" fill="#059669"/>
+  <rect x="25" y="23" width="14" height="6" rx="1.5" fill="#059669"/>
+</svg>
