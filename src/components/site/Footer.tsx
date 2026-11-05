@@ -42,8 +42,7 @@ export function Footer() {
             </p>
             <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
               MDS, FDS RCPS (UK), Fellow AOCMF (Austria), FIBOMS, FIBCSOMS, Diploma in Oral
-              Oncology. Regulated Specialist in Maxillofacial Surgery under the Dental Council of
-              India (DCI) and State Dental Council.
+              Oncology
             </p>
           </div>
 
